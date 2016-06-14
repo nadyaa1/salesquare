@@ -1,0 +1,133 @@
+body{
+  background-color: #eeeeee;
+  min-height: 100vh;
+}
+
+
+
+.cat-card1{
+  background: linear-gradient(-225deg, rgba(0,101,168,0.5) 0%, rgba(0,36,61,0.5) 50%), image-url('man-cat.jpg');
+  background-size: cover;
+  zoom: 0.3;
+  height: 300px;
+  color: #eeeeee;
+  margin: 10px;
+}
+
+.cat-card2{
+  background: linear-gradient(-225deg, rgba(0,101,168,0.5) 0%, rgba(0,36,61,0.5) 50%), image-url('women-cat.jpg');
+  background-size: cover;
+  line-height: 300px;
+  height: 300px;
+  color: #eeeeee;
+  margin: 10px;
+}
+
+.cat-card3{
+  background: linear-gradient(-225deg, rgba(0,101,168,0.5) 0%, rgba(0,36,61,0.5) 50%), image-url('kid-cat.jpg');
+  background-size: cover;
+  line-height: 300px;
+  height: 300px;
+  color: #eeeeee;
+  margin: 10px;
+}
+
+.cat-txt{
+  color: white;
+  margin: 0px;
+  line-height: 300px;
+}
+
+
+.cat-card1 h1{
+  margin: 0px;
+  line-height: 300px;
+}
+
+.cat-card2 h1{
+  margin: 0px;
+  line-height: 300px;
+}
+
+.cat-card3 h1{
+  margin: 0px;
+  line-height: 300px;
+}
+
+
+.wrapper-home{
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(143deg, rgba(255,255,255,0.5) 0%, rgba(0,173,181,0.74) 49%, rgba(0,128,128,1) 100%), url(http://unsplash.it/2000/520) ;
+  border-bottom: 2px solid #393e46;
+}
+
+.product-card{
+  text-align: center;
+  width: 280px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #393e46;
+
+}
+.product-card h3{
+  font-size: 20px;
+  color: #812d58;
+}
+.product-card hr{
+  border: 1px solid #393e46;
+}
+
+.logo-banner{
+
+}
+
+.products{
+  text-decoration: none;
+  padding: 30px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.without-margin{
+  margin: 0px;
+}
+
+
+/* Navbar search form */
+.home-search {
+  box-shadow: none;
+  border: none;
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+}
+.home-search-btn {
+  line-height: 35px;
+  color: #00adb5;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #00adb5;
+  z-index: 0;
+}
+.home-search-input {
+  background-color: transparent;
+  flex: 0 1 300px;
+  transition: all 0.15s ease;
+  line-height: 35px;
+  font-weight: lighter;
+  color: #00adb5;
+  border: 0px;
+  border-bottom: 2px solid #00adb5;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+.home-search-input:focus  {
+  border-bottom: 2px solid #00adb5;
+}
