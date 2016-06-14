@@ -1,0 +1,27 @@
+<div class="text-center">
+  <h1 >featured products</h1>
+  <p>collection of nice products</p>
+</div>
+<div class="products">
+  <div class="featured-products">
+    <div class="container">
+      <div class="row">
+        <% @products.each do |product| %>
+        <ul class="product-card col-xs-12 col-sm-3 list-unstyled ">
+          <h3> <%= product.name %> | <%= product.description %> </h3>
+          <li>  <%= image_tag "http://unsplash.it/250/100" %></li>
+          <li> € <%= product.price %></li>
+          <li><a class="card-btn"><%= product.url %></a></li>
+          <li> <%= link_to "show product", product_path(product) %></li>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% if current_user && current_user.merchant %>
+<h3> Test </h3>
+<% end %>
+
