@@ -18,9 +18,16 @@
 
 }
 
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src:font-url('HelveticaNeue-Medium.ttf');
+    src:font-url('HelveticaNeue-Medium.ttf') format('truetype');
+
+}
+
 $base-font: "HelveticaNeue-Light", "Helvetica", "sans-serif";
 $header-font: "HelveticaNeue-CondensedBold", "Helvetica", "sans-serif";
-
+$subheader-font: "HelveticaNeue-Medium", "Helvetica", "sans-serif";
 
 
  // Local fonts (uncomment following lines)
