@@ -50,3 +50,20 @@
 .sharedlinks{
   display: inline;
 }
+
+.loginlinks{
+  display: flex;
+  justify-content: space-around;
+}
+.loginlinks a{
+  width: 180px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-bottom: 0px;
+  transition: 0.3s
+}
+
+.loginlinks a:hover{
+border-bottom: 1px solid $brand-color;
+text-decoration: none;
+}
