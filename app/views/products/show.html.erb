@@ -1,10 +1,20 @@
 
-<h1> products detail</h1>
+<h1><%= @product.name %></h1>
+<h2>
+  <%= pluralize @product.reviews.size, "review" %>
+</h2>
 
-<h2><%= @product.name %></h2>
-<p><%= @product.description %></p>
-<p><%= @product.price %></p>
-<p><%= @product.url %></p>
+<div id="reviews">
+  <% if @product.reviews.blank? %>
+    Be the first to leave a review for <%= @product.name %>
+  <% else %>
+    <% @product.reviews.each do |review| %>
+      <%= render 'reviews/show', review: review %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= render 'reviews/form', product: @product, review: @review %>
 
 
 <!-- app/views/restaurants/show.html.erb -->
