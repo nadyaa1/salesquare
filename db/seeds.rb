@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.create(name: "Gucci", description: "t-shirt", gender: 0, price: 1000, url: "#" )
-Product.create(name: "LV", description: "bag", gender: 1, price:  1000, url: "#" )
-Product.create(name: "Valentino", description: "shoes", gender: 2, price:  1000, url: "#" )
-Product.create(name: "Nike", description: "hat", gender: 0, price:  500, url: "#" )
+Product.create(name: "H&M", description: "t-shirt", category: "men", price: 19.99, url: "http://www.hm.com" )
+Product.create(name: "Zara", description: "bag", category: "men", price:  35, url: "http://www.zara.com" )
+Product.create(name: "WE", description: "shoes", category: "women", price:  65.50, url: "http://www.wefashion.nl" )
+Product.create(name: "G-Star", description: "hat", category: "kids", price:  50, url: "http://www.g-star.com" )
+Product.create(name: "Jack & Jones", description: "sweater", category: "kids", price:  25, url: "http://jackjones.nl" )
+Product.create(name: "Topman", description: "jacket", category: "men", price:  99.99, url: "http://topman.com" )
