@@ -1,18 +1,24 @@
-<h2>Sign up</h2>
+<br>
+<div class="login-wrapper text-center">
+ <img src="http://unsplash.it/700/251')" alt="">
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
+<div class="form-inputs salelogin">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "email" %>
+    <%= f.input :password, required: true, label: false, placeholder: "password" %>
+    <%= f.input :password_confirmation, required: true, label: false, placeholder: "confirm password" %>
     <%= f.input_field :merchant, as: :boolean, inline_label: "Merchant?" %>
   </div>
-
+<div class="f-actions">
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "loginn" %>
   </div>
 <% end %>
+</div>
 
+<div class="loginlinks">
 <%= render "devise/shared/links" %>
+</div>
+</div>
