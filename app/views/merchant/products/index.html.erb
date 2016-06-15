@@ -2,6 +2,9 @@
 <h1>List of Products</h1>
 <% @products.each do |product| %>
 <h2><%= product.name %></h2>
+<p><%= product.description %></p>
+<p><%= product.price %></p>
+<p><%= product.url %></p>
 <%= link_to "Delete this product", ([:merchant,product]), method: :delete %>
 <% end %>
 
