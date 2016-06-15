@@ -1,0 +1,6 @@
+<%= simple_form_for([ product, review ], remote: true) do |form| %>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.input :rating %>
+  <%= form.button :submit %>
+<% end %>
