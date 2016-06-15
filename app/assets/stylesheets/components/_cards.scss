@@ -1,4 +1,36 @@
+.products{
+  margin: 0 auto;
+}
+
+
 .products-wrapper{
   background-color: white;
-  max-width: 200px;
+  margin: 20px;
+  width: auto;
+  padding: 0px;
+   box-shadow: 0 4px 6px -6px #222;
+}
+
+.pimage{
+  max-width: 100%;
+}
+
+hr{
+  margin: 3px;
+}
+
+.pname h3{
+  margin: 0px;
+}
+
+.showproduct{
+  background-color: $brand-color;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 1px;
+  color: white;
+}
+
+.showproduct:hover{
+  color: white;
 }
