@@ -1,19 +1,21 @@
-<div class="container">
-  <div class="row">
+<div class="container text-center ">
+  <div class="row products">
     <% @products.each do |p| %>
     <div class="products-wrapper col-xs-12 col-sm-3">
       <div class="pimage">
-        <%= image_tag "http://unsplash.it/200/200" %>
+        <%= image_tag "http://unsplash.it/300/200" %>
       </div>
       <div class="pname">
-        <%= p.name %>
+        <h3><%= p.name %></h3>
       </div>
+      <div class="pbrand">
+        <%= p.category %>
+      </div>
+      <hr/>
       <div class="pdescription">
         <%= p.description %>
       </div>
-      <div class="pbrand">
-        <%= p.brand %>
-      </div>
+      <%= link_to "show product", product_path(p), class: "showproduct" %>
     </div>
     <% end %>
   </div>
