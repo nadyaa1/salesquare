@@ -8,6 +8,7 @@
       <div class="row">
         <% @products.each do |product| %>
         <ul class="product-card col-xs-12 col-sm-3 list-unstyled ">
+          <%= image_tag @product.photo.url(:bright_face) %>
           <h3> <%= product.name %> | <%= product.description %> </h3>
           <li>  <%= image_tag "http://unsplash.it/250/100" %></li>
           <li> € <%= product.price %></li>
