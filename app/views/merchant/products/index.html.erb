@@ -1,6 +1,7 @@
 
 <h1>List of Products</h1>
 <% @products.each do |product| %>
+<%= image_tag product.photo.url(:bright_face) %>
 <h2><%= product.name %></h2>
 <p><%= product.description %></p>
 <p><%= product.price %></p>
