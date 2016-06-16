@@ -1,7 +1,32 @@
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  // position: relative;
+  // margin-top: -150px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  padding-top:20px;
+}
+
 #footer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   background: #FFFFFF;
   padding: 0;
   color: #232323;
+<<<<<<< HEAD
   bottom: 0px;
   right: 0px;
   left: 0px;
@@ -43,3 +68,26 @@
   color: $brand-color;
   text-decoration: underline;
 }
+=======
+  // bottom:0px;
+  // right:0px;
+  // left:0px;
+  // position: absolute;
+  border-top: 1.5px solid #232323;
+}
+// #footer p {
+//   margin-top: 17px;
+// }
+// #footer ul {
+//   margin-top: 10px;
+// }
+// #footer a {
+//   color: #232323;
+//   font-size: 30px;
+//   letter-spacing: 20px;
+//   transition: color 0.5s ease;
+// }
+// #footer a:hover{
+//   color: $brand-color;
+// }
+>>>>>>> 36b11fbe4670e8e90405e05b8ea60f4c8ea1298a
