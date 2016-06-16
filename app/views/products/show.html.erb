@@ -1,25 +1,56 @@
-<%= image_tag @product.photo.url(:bright_face) %>
-<h2><%= @product.name %></h2>
-<p><%= @product.description %></p>
-<p><%= @product.price %></p>
-<p><%= @product.url %></p>
 
-<h1><%= @product.name %></h1>
-<h2>
-  <%= pluralize @product.reviews.size, "review" %>
-</h2>
+<div class="container">
+  <div class="wrapper-white">
+    <div class="row">
+      <div class="col-xs-12 col-md-5 col-lg-4">
+        <div class="pimage">
+          <%= image_tag "http://unsplash.it/400/400", class: "product-image" %>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2 col-lg-2">
+        <div class="pimage1">
+          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
+          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
+          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-5 col-lg-6">
+        <div class="positionText">
+          <h1 class="flex-styling-small"><%= @product.name %></h1>
+          <p class="flex-styling-small"><%= @product.category %></p>
+          <p class="flex-styling-large"><%= @product.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div id="reviews">
-  <% if @product.reviews.blank? %>
-    Be the first to leave a review for <%= @product.name %>
-  <% else %>
-    <% @product.reviews.each do |review| %>
-      <%= render 'reviews/show', review: review %>
-    <% end %>
-  <% end %>
+  <%= image_tag @product.photo.url(:bright_face) %>
+  <h2><%= @product.name %></h2>
+  <p><%= @product.description %></p>
+  <p><%= @product.price %></p>
+  <p><%= @product.url %></p>
+
+
+  <hr></hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="productShow-wrapper">
+        <div class="positionReview">
+          <%= pluralize @product.reviews.size, "review" %>
+          <div id="reviews">
+            <% if @product.reviews.blank? %>
+            Be the first to leave a review for <%= @product.name %>
+            <% else %>
+            <% @product.reviews.each do |review| %>
+            <%= render 'reviews/show', review: review %>
+            <% end %>
+            <% end %>
+          </div>
+
+          <%= render 'reviews/form', product: @product, review: @review %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= render 'reviews/form', product: @product, review: @review %>
-
-
-<!-- app/views/restaurants/show.html.erb -->
