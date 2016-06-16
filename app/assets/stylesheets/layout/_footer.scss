@@ -34,8 +34,7 @@ html, body {
 }
 
 #footer p {
-  margin-top: 0px;
-  font-size: 10px;
+  margin-top: 1px;
 }
 
 #footer ul {
@@ -43,29 +42,50 @@ html, body {
   position: relative;
 }
 
-#footer i {
+.footer-icons {
+  float: left;
+}
+
+.footer-pages {
+  float: right;
+}
+.footer-icons i {
   color: #232323;
-  font-size: 30px;
+  font-size: 1em;
   letter-spacing: 20px;
   transition: color 0.5s ease;
 }
 
-#footer i:hover{
+
+.footer-icons i:hover {
   color: $brand-color;
 }
 
-.footer-links {
+.footer-icons ul {
+  font-family: Open Sans;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 0.9em;
 }
 
-#footer a {
+.footer-pages a {
   color: #232323;
   font-family: Open Sans;
-  font-weight: light;
   text-transform: uppercase;
+  font-size: 0.9em;
 }
 
-#footer a:hover {
+.footer-pages a:hover{
   color: $brand-color;
   text-decoration: underline;
+}
+
+.footer-terms {
+  margin-top: -10px;
+}
+
+.footer-terms p {
+  font-family: Open Sans;
+  font-size: 0.875em;
+  color: $brand-color;
 }
