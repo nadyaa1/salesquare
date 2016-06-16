@@ -1,5 +1,6 @@
 .products{
   margin: 0 auto;
+
   // display: flex;
   // justify-content: space around;
   // overflow: none;
@@ -12,10 +13,12 @@
   box-shadow: 0 4px 6px -6px #222;
   max-width: 300px;
   margin: 10px auto;
+  overflow: hidden;
 }
 
 .pimage{
   max-width: 100%;
+  padding-top: 0px;
 }
 
 .pdescription{
