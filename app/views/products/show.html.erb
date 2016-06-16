@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="wrapper-white">
     <div class="row">
@@ -22,6 +23,13 @@
       </div>
     </div>
   </div>
+
+  <%= image_tag @product.photo.url(:bright_face) %>
+  <h2><%= @product.name %></h2>
+  <p><%= @product.description %></p>
+  <p><%= @product.price %></p>
+  <p><%= @product.url %></p>
+
 
   <hr></hr>
   <div class="row">
