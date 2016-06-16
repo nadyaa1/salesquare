@@ -16,18 +16,14 @@
           <div class="pname">
             <h3><%= p.name %></h3>
           </div>
-
+          <hr/>
           <div class="pcatlink">
-          <div class="pcategory">
-            <%= p.category %>
-          </div>
-          <hr/>
-          <div class="pdescription">
-            <%= p.description %>
-          </div>
-          <hr/>
-          <br>
-          <%= link_to "show product", product_path(p), class: "showproduct" %>
+            <div class="pcategory">
+              <%= p.category %>
+            </div>
+            <hr/>
+            <br>
+            <%= link_to "show product", product_path(p), class: "showproduct" %>
           </div>
         </div>
       </div>
