@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160616095949) do
-=======
-ActiveRecord::Schema.define(version: 20160615123416) do
->>>>>>> 80b3884491f8b03bbc17dbfad793d2dfca3cc2c1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,10 +28,7 @@ ActiveRecord::Schema.define(version: 20160615123416) do
     t.datetime "updated_at",     null: false
     t.string   "url"
     t.integer  "user_id"
-<<<<<<< HEAD
     t.string   "photo"
-=======
->>>>>>> 80b3884491f8b03bbc17dbfad793d2dfca3cc2c1
   end
 
   add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
