@@ -8,6 +8,9 @@
 <%= f.text_field :price %>
 <%= f.label :description %>
 <%= f.text_field :description %>
+<%= f.label :photo %>
+<%= f.file_field :photo %>
+<%= f.hidden_field :photo_cache %>
 <%= f.label :URL %>
 <%= f.text_field :url %>
 
