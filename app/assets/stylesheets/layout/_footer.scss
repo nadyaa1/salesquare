@@ -1,25 +1,45 @@
 #footer {
   background: #FFFFFF;
-  padding: 10px 0;
+  padding: 0;
   color: #232323;
-  bottom:0px;
-  right:0px;
-  left:0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
   position: absolute;
-  border-top: 1.5px solid #232323;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
+
 #footer p {
-  margin-top: 17px;
+  margin-top: 0px;
+  font-size: 10px;
 }
 #footer ul {
   margin-top: 10px;
+  position: relative;
 }
-#footer a {
+
+#footer i {
   color: #232323;
   font-size: 30px;
   letter-spacing: 20px;
   transition: color 0.5s ease;
 }
-#footer a:hover{
+#footer i:hover{
   color: $brand-color;
+}
+
+.footer-links {
+  font-size: 0.9em;
+}
+
+#footer a {
+  color: #232323;
+  font-family: Open Sans;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+#footer a:hover {
+  color: $brand-color;
+  text-decoration: underline;
 }
