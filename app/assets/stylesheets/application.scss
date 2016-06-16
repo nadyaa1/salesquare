@@ -12,10 +12,23 @@
 @import "layout/index";
 @import "components/index";
 @import "components/loginform";
+@import "components/productspage";
 @import "pages/index";
 @import "vendor/index";
 
 // Fonts
 h3{
   font-family: $subheader-font;
+  font-size: 18px;
+}
+
+body{
+  background-color: #eeeeee;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.website-container{
+  flex: 1;
 }

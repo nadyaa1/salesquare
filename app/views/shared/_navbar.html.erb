@@ -4,18 +4,18 @@
   <%= image_tag "logo.png" %>
   <% end %>
 
-      <!-- Search form -->
-      <div class="container text-center">
-      <div class="row">
+  <!-- Search form -->
+  <div class="container text-center">
+    <div class="row">
       <div class="hidden-xs hidden-sm">
-  <form action="" class="navbar-wagon-search">
-    <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-    <button type="submit" class="navbar-wagon-search-btn">
-    </button>
-    <i class="fa fa-search"></i>
-  </form>
-  </div>
-  </div>
+        <form action="" class="navbar-wagon-search">
+          <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+          <button type="submit" class="navbar-wagon-search-btn">
+          </button>
+          <i class="fa fa-search"></i>
+        </form>
+      </div>
+    </div>
   </div>
 
   <!-- Right Navigation -->
@@ -63,8 +63,9 @@
     <% else %>
 
     <!-- Login text link -->
-    <%= link_to t(".sign_in", default: "Sign in"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
+    <div class="hidden-md">
+      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    </div>
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>

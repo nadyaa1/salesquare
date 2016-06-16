@@ -3,7 +3,7 @@ class Merchant::ProductsController < ApplicationController
   before_action :check_merchant, only:[ :new, :create, :edit, :update, :destroy ]
 
   def index
-    @products = Product.all
+    @products = current_user.products
   end
 
   def show
@@ -15,7 +15,12 @@ class Merchant::ProductsController < ApplicationController
   end
 
   def create
+<<<<<<< HEAD
     @product = Product.new(params.require(:product).permit(:name, :description, :photo, :photo_cache, :price, :url))
+=======
+    @product = Product.new(params.require(:product).permit(:name, :description, :category, :price, :url))
+    @product.user = current_user
+>>>>>>> 80b3884491f8b03bbc17dbfad793d2dfca3cc2c1
     @product.save!
     redirect_to product_path(@product)
   end
@@ -26,7 +31,11 @@ class Merchant::ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
+<<<<<<< HEAD
     @product.update(params.require(:product).permit(:name, :description, :photo, :photo_cache, :price, :url))
+=======
+    @product.update(params.require(:product).permit(:name, :description, :category, :price, :url))
+>>>>>>> 80b3884491f8b03bbc17dbfad793d2dfca3cc2c1
     redirect_to product_path(@product)
   end
 
