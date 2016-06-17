@@ -57,6 +57,22 @@ padding: 50px;
 
 
 .wrapper-info i{
+  color: $brand-color;
   margin-top: 30px;
   font-size: 40px;
+}
+
+.infoelement{
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  opacity: 0.7;
+  height: 200px;
+  border-bottom: 2px solid $brand-color;
+  transition: 1s;
+}
+
+.infoelement:hover{
+  opacity: 1;
 }
