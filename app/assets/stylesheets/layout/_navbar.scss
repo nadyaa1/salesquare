@@ -32,6 +32,7 @@
   align-items: center;
   justify-content: space-between;
   width: 300px;
+  z-index: 100;
 }
 
 /* Navbar item */
@@ -141,8 +142,12 @@
   text-decoration: none;
 }
 
-// .center-searchbar{
-//   position: absolute;
-//   width: 100%;
-//   top: 20px;
-// }
+.center-searchbar{
+  position: absolute;
+  width: 100%;
+  top: 20px;
+}
+
+a{
+  z-index: 100;
+}
