@@ -2,57 +2,65 @@
 <!-- categories bar -->
 
 <div class="hidden-sm hidden-xs">
-<div class="container-categories">
-  <div class="text-center">
-    <li><%= link_to "Women", products_path(category: "women") %></li>
-    <li><%= link_to "Shoes", products_path(category: "shoes") %></li>
-    <li><%= link_to "Bags", products_path(category: "bags") %></li>
-    <li><%= link_to "Men", products_path(category: "men") %></li>
-    <li><%= link_to "Kids", products_path(category: "kids") %></li>
-    <li><%= link_to "Dresses", products_path(category: "dresses") %></li>
-    <li><%= link_to "Coats", products_path(category: "coats") %></li>
-  </div>
-</div>
-</div>
-
-<!-- end categires bar -->
-
-<!-- banner -->
-
-<div class="banner-container">
-  <div class="banner-content text-center">
-    <h1>WELCOME TO SALESQUARE</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <br>
-    <a class="salebutton" href="">Show me</a>
-  </div>
-</div>
-
-<!-- end banner -->
-
-<!-- quick info -->
-
-<div class="wrapper-info text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <i class="fa fa-money"></i>
-        <h2>Want to save money?</h2>
-        <p>But still want the best quality?</p>
-      </div>
-      <div class="col-xs-12 col-md-4">
-      <i class="fa fa-shopping-bag"></i>
-      <h2>Shop 'till you drop</h2>
-      <p>You are on the right place!
-      Salesquare provides the best deals by comapring the biggest sales.</p>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <i class="fa fa-comments-o"></i>
-        <h2>Read some of the reviews</h2>
-        <p>And see for yourself!</p>
-      </div>
+  <div class="container-categories">
+    <div class="text-center">
+      <li><%= link_to "Women", products_path(category: "women") %></li>
+      <li><%= link_to "Shoes", products_path(category: "shoes") %></li>
+      <li><%= link_to "Bags", products_path(category: "bags") %></li>
+      <li><%= link_to "Men", products_path(category: "men") %></li>
+      <li><%= link_to "Kids", products_path(category: "kids") %></li>
+      <li><%= link_to "Dresses", products_path(category: "dresses") %></li>
+      <li><%= link_to "Coats", products_path(category: "coats") %></li>
     </div>
   </div>
-</div>
 
-<!-- end info -->
+  <!-- end categires bar -->
+
+  <!-- banner -->
+
+  <div class="banner-container">
+    <div class="banner-content text-center">
+      <h1>WELCOME TO SALESQUARE</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <br>
+      <a class="salebutton" href="">Show me</a>
+    </div>
+  </div>
+
+  <!-- end banner -->
+
+  <!-- quick info -->
+
+  <div class="wrapper-info text-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-md-4">
+          <div class="infoelement">
+            <i class="fa fa-money"></i>
+            <h3>Want to save money?</h3>
+            <p>But still want the best quality?</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <div class="infoelement">
+            <i class="fa fa-shopping-bag"></i>
+            <h3>Shop 'till you drop</h3>
+            <p>You are on the right place!
+              Salesquare provides the best deals by comapring the biggest sales.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+            <div class="infoelement">
+              <i class="fa fa-comments-o"></i>
+              <h3>Read some of the reviews</h3>
+              <p>And see for yourself!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end info -->
