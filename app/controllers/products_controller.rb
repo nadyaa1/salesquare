@@ -2,12 +2,12 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only:[ :index, :show ]
 
   def index
-    if params[:gender] == "men"
-      @products = Product.where(category: men)
-    elsif params[:gender] == "women"
-      @products = Product.where(category: women)
-    elsif params[:gender] == "kids"
-      @products = Product.where(category: kids)
+    if params[:category] == "men"
+      @products = Product.where(category: "men")
+    elsif params[:category] == "women"
+      @products = Product.where(category: "women")
+    elsif params[:category] == "kids"
+      @products = Product.where(category: "kids")
     else
       @products = Product.all
     end
