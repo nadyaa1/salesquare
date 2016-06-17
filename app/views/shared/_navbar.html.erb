@@ -29,12 +29,19 @@
     <% if user_signed_in? %>
 
     <!-- Notification -->
-    <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+<!--     <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
     <div class="badge-container">
       <i class="fa fa-envelope-o"></i>
       <div class="badge badge-blue">3</div>
     </div>
-    <% end %>
+    <% end %> -->
+
+     <!-- Add product button-->
+    <div class="add-product">
+      <% if current_user && current_user.merchant %>
+      <%= link_to "Add product", new_merchant_product_path %>
+      <% end %>
+    </div>
 
     <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
@@ -58,9 +65,6 @@
           </li>
         </ul>
       </div>
-      <% if current_user && current_user.merchant %>
-      <%= link_to "add product", new_merchant_product_path %>
-      <% end %>
     </div>
 
     <% else %>
