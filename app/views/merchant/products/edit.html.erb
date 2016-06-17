@@ -1,4 +1,4 @@
-<h1>Edit a product</h1>
+<!--
 
 <%= form_for [:merchant, @product] do |f| %>
 <%= f.label :name %>
@@ -17,3 +17,40 @@
 
 <%= f.submit %>
 <% end %>
+ -->
+<br>
+<div class="login-wrapper text-center">
+ <img src="http://unsplash.it/1002/250')" alt="">
+ <div class="form-inputs salelogin"><h1>Edit Product</h1>
+
+  <%= simple_form_for [:merchant, @product] do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name,  autofocus: true,
+    class: "finput",
+      placeholder: "Title" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :price, class: "finput", placeholder: "Price (€)" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :description, class: "finput", placeholder: "Description" %>
+    </div>
+    <div class="form-group">
+      <%= f.file_field :photo, class: "finput", placeholder: "Add a photo!" %>
+      <%= f.hidden_field :photo_cache %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :category, class: "finput", placeholder: "Category (men, women, etc..)" %>
+    </div>
+    <div class="form-group">
+    <%= f.text_field :url, class: "finput", placeholder: "URL" %>
+    </div>
+    <div class="f-actions">
+      <div class="form-actions">
+        <%= f.submit class:"loginn" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
