@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 300px;
 }
 
 /* Navbar item */
@@ -133,6 +133,7 @@
 .add-product a {
   color: black;
   font-size: 14px;
+  padding-right: 5px;
 }
 
 .add-product a:hover {
