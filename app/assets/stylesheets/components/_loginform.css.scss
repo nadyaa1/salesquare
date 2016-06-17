@@ -8,10 +8,21 @@
 }
 
 .salelogin{
+  padding: 10px;
   background-color: white;
 }
 
 //form input styling
+
+.finput{
+  width: 100%;
+  box-shadow: none;
+  border: 0px;
+}
+.finput:focus{
+  box-shadow: none;
+  border: 0px;
+}
 
 .email{
   box-shadow: none;
@@ -30,6 +41,8 @@
   box-shadow: none;
   border: 0px;
 }
+
+
 //end form input styiling
 
 

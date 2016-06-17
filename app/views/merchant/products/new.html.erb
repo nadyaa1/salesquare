@@ -1,20 +1,30 @@
+<br>
+<div class="login-wrapper text-center">
+ <img src="http://unsplash.it/1002/250')" alt="">
+<div class="form-inputs salelogin"><h1>Add new Product</h1>
 
-<h1>Add new Product</h1>
+  <%= simple_form_for [:merchant, @product] do |f| %>
 
-<%= form_for [:merchant, @product] do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :price %>
-<%= f.text_field :price %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.label :photo %>
-<%= f.file_field :photo %>
-<%= f.hidden_field :photo_cache %>
-<%= f.label :category %>
-<%= f.text_field :category %>
-<%= f.label :URL %>
-<%= f.text_field :url %>
+  <%= f.text_field :name,  autofocus: true,
+  class: "finput",
+    placeholder: "Title" %>
 
-<%= f.submit %>
-<% end %>
+    <%= f.text_field :price, class: "finput", placeholder: "Price" %>
+
+    <%= f.text_field :description, class: "finput", placeholder: "Description" %>
+
+    <%= f.file_field :photo, class: "finput", placeholder: "Add a photo!" %>
+    <%= f.hidden_field :photo_cache %>
+
+    <%= f.text_field :category, class: "finput", placeholder: "Category (men, women, etc..)" %>
+
+    <%= f.text_field :url, class: "finput", placeholder: "URL" %>
+<div class="f-actions">
+<div class="form-actions">
+    <%= f.submit class:"loginn" %>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<br>
