@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-5 col-lg-4">
         <div class="pimage">
-          <%= image_tag "http://unsplash.it/400/400", class: "product-image" %>
+          <%= image_tag @product.photo.url(:product_show), class: "product-image" %>
         </div>
       </div>
       <div class="col-xs-6 col-md-2 col-lg-2">
@@ -16,25 +16,26 @@
       </div>
       <div class="col-xs-6 col-md-5 col-lg-6">
         <div class="positionText">
-          <h1 class="flex-styling-small"><%= @product.name %></h1>
-          <p class="flex-styling-small"><%= @product.category %></p>
-          <p class="flex-styling-large"><%= @product.description %></p>
+          <h2 class="flex-styling-small"><%= @product.name %></h2>
+          <p class="flex-styling-small" ><%= @product.price %></p>
+          <p><b>Description:</b></p>
+          <p class="flex-styling-small"><%= @product.description %></p>
+          <p class="flex-styling-small"><%= @product.url %></p>
+          <div class="text-inline">
+          <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
+            <button type="button" class="btn btn-primary btn-lg">Add to Wishlist</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-  <%= image_tag @product.photo.url(:bright_face) %>
-  <h2><%= @product.name %></h2>
-  <p><%= @product.description %></p>
-  <p><%= @product.price %></p>
-  <p><%= @product.url %></p>
 
 
   <hr></hr>
   <div class="row">
     <div class="col-xs-12">
       <div class="productShow-wrapper">
+      <h3><b><font size="6">Reviews:</font></b></h3>
         <div class="positionReview">
           <%= pluralize @product.reviews.size, "review" %>
           <div id="reviews">
@@ -42,7 +43,9 @@
             Be the first to leave a review for <%= @product.name %>
             <% else %>
             <% @product.reviews.each do |review| %>
+            <div id="reviews-box">
             <%= render 'reviews/show', review: review %>
+            </div>
             <% end %>
             <% end %>
           </div>
@@ -53,3 +56,6 @@
     </div>
   </div>
 </div>
+
+
+

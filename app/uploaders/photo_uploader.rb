@@ -14,4 +14,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   version :bright_face do
     cloudinary_transformation width: 300, height: 200, crop: :thumb, gravity: :face
   end
+
+    version :product_show do
+    cloudinary_transformation width: 400, height: 400, crop: :thumb, gravity: :face
+  end
 end
