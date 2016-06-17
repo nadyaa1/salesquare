@@ -15,7 +15,7 @@ class Merchant::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params.require(:product).permit(:name, :description, :photo, :photo_cache, :price, :url))
+    @product = Product.new(product_params)
     @product.user = current_user
     @product.save!
     redirect_to product_path(@product)
@@ -27,7 +27,7 @@ class Merchant::ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update(params.require(:product).permit(:name, :description, :photo, :photo_cache, :price, :url))
+    @product.update(product_params)
     redirect_to product_path(@product)
   end
 
@@ -35,5 +35,19 @@ class Merchant::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to merchant_products_path
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(
+      :name,
+      :description,
+      :photo,
+      :photo_cache,
+      :price,
+      :url,
+      :category
+    )
   end
 end
