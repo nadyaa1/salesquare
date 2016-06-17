@@ -12,22 +12,22 @@
         <div class="products-wrapper">
           <div class="pimage">
            <%= cl_image_tag p.photo.url(:bright_face) %>
-          </div>
-          <div class="pname">
-            <h3><%= p.name %></h3>
-          </div>
-          <hr/>
-          <div class="pcatlink">
-            <div class="pcategory">
-              <%= p.category %>
-            </div>
-            <hr/>
-            <br>
-            <%= link_to "show product", product_path(p), class: "showproduct" %>
-          </div>
+         </div>
+         <div class="pname">
+          <h3><%= p.name %></h3>
+        </div>
+        <hr/>
+
+        <div class="pcategory">
+          € <%= p.price %>
+        </div>
+        <hr/>
+        <div class="pcatlink">
+          <%= link_to "show product", product_path(p), class: "showproduct" %>
         </div>
       </div>
-      <% end %>
     </div>
+    <% end %>
   </div>
+</div>
 </div>
