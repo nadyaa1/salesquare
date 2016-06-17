@@ -9,7 +9,7 @@ module Users
     # end
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:merchant, :email, :password, :password_confirmation, :remember_me) }
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:merchant, :email, :password, :password_confirmation, :photo, :photo_cache, :remember_me) }
     end
   end
 end
