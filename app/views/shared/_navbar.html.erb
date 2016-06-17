@@ -36,13 +36,18 @@
     </div>
     <% end %> -->
 
-     <!-- Add product button-->
+    <!-- Add product button-->
     <div class="add-product">
       <% if current_user && current_user.merchant %>
       <%= link_to "Add product", new_merchant_product_path %>
       <% end %>
     </div>
 
+    <div class="add-product">
+      <% if current_user && current_user.merchant %>
+      <%= link_to "List my Products", merchant_products_path%>
+      <% end %>
+    </div>
     <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
