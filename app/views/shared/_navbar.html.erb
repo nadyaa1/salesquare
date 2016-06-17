@@ -58,6 +58,9 @@
           </li>
         </ul>
       </div>
+      <% if current_user && current_user.merchant %>
+      <%= link_to "add product", new_merchant_product_path %>
+      <% end %>
     </div>
 
     <% else %>
