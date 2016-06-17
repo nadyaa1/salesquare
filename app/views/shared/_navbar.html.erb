@@ -63,9 +63,8 @@
     <% else %>
 
     <!-- Login text link -->
-    <div class="hidden-md">
-      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    </div>
+
+    <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
@@ -86,4 +85,3 @@
     </div>
   </div>
 </div>
-
