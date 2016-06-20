@@ -7,3 +7,8 @@ $('document').ready(function() {
     $('#flash').slideUp();
   }, 3000);
 });
+
+/*$('#addOffer').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+*/

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show, :create, :destroy] do
     resources :reviews, only: :create
+    resources :wishlist_products, only: :create
   end
 
   resource :account, only: [:show, :edit, :update]
