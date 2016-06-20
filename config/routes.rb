@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show, :create, :destroy] do
 
     resources :reviews, only: :create
-    resources :wishlist_products, only: :create
+
+    resources :wishlist_products, only: [:show, :create]
 
   end
 
-  resource :account, only: [:show, :edit, :update]
+  resource :account, only: [:show, :edit, :update] do
+    resources :wishlists, only: [:index]
+  end
 
   namespace :merchant do
     resources :products

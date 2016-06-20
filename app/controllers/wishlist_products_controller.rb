@@ -1,4 +1,9 @@
 class WishlistProductsController < ApplicationController
+
+  def show
+    @wishlists = Wishlist.all
+  end
+
   def create
     @product = Product.find(params[:product_id])
     @wishlist_product = WishlistProduct.new(product: @product)
