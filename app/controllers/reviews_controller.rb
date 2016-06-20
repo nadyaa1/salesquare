@@ -23,10 +23,5 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:description, :title, :rating)
   end
 
- def destroy
-    @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to user_products_path
-  end
 
 end

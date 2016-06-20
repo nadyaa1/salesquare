@@ -5,7 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
          has_many :products
+
          has_many :reviews
+
+         has_many :wishlists
+
 
   mount_uploader :photo, PhotoUploader
 end

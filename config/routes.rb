@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
 
   resources :products, only: [:index, :show, :create, :destroy] do
-    resources :reviews, only: [:create, :destroy]
+
+    resources :reviews, only: :create
+    resources :wishlist_products, only: :create
+
   end
 
   resource :account, only: [:show, :edit, :update]
