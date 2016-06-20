@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :products, only: [:index, :show, :create, :destroy] do
+
     resources :reviews, only: :create
+
     resources :wishlist_products, only: [:show, :create]
+
   end
 
   resource :account, only: [:show, :edit, :update] do
