@@ -35,15 +35,17 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="show-wrapper">
+      <div class="reviewintro">
       <h1>Reviews</h1>
         <div class="positionReview">
           <%= pluralize @product.reviews.size, "review" %>
+            </div>
           <div id="reviews">
             <% if @product.reviews.blank? %>
             Be the first to leave a review for <%= @product.name %>
             <% else %>
             <% @product.reviews.each do |review| %>
-            <div class="reviews-boxx">
+            <div class="reviews-box">
             <%= render 'reviews/show', review: review %>
             </div>
             <% end %>
