@@ -1,5 +1,10 @@
 def authenticate_admin!
-  redirect_to new_user_session_path unless current_user && current_user.admin
+  if current_user.nil?
+    redirect_to new_user_session_path
+  elsif current_user.admin == false
+    flash[:alert] = "Not authorized"
+    redirect_to root_path
+  end
 end
 
 ActiveAdmin.setup do |config|
