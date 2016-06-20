@@ -16,5 +16,9 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @review = Review.new
+    @wishlist_product = WishlistProduct.new
+    if user_signed_in?
+      @wishlists = current_user.wishlists
+    end
   end
 end
