@@ -34,8 +34,8 @@
   <hr></hr>
   <div class="row">
     <div class="col-xs-12">
-      <div class="productShow-wrapper">
-      <h3><b><font size="6">Reviews:</font></b></h3>
+      <div class="show-wrapper">
+      <h1>Reviews</h1>
         <div class="positionReview">
           <%= pluralize @product.reviews.size, "review" %>
           <div id="reviews">
@@ -43,7 +43,7 @@
             Be the first to leave a review for <%= @product.name %>
             <% else %>
             <% @product.reviews.each do |review| %>
-            <div id="reviews-box">
+            <div class="reviews-boxx">
             <%= render 'reviews/show', review: review %>
             </div>
             <% end %>
