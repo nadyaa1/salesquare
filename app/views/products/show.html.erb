@@ -24,7 +24,11 @@
           <div class="text-inline">
             <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
             <% if user_signed_in? %>
-            <a href="#add-to-wishlist" class="btn btn-primary btn-lg">Add to Wishlist</a>
+           <!--  <a href="#add-to-wishlist" class="btn btn-primary btn-lg">Add to Wishlist</a> -->
+           <%= link_to "#addToWishlist", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
+            <% end %>
+            <%= render "addToWishlist" %>
             <% else %>
             <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg" %>
             <% end %>
@@ -35,23 +39,12 @@
   </div>
 
 
+
   <hr></hr>
   <div class="row">
     <div class="col-xs-12">
       <div class="productShow-wrapper">
-        <% if user_signed_in? %>
-        <div id="add-to-wishlist">
-          <%= simple_form_for [@product, @wishlist_product] do |f| %>
-          <% if @wishlists.any? %>
-            <%= f.association :wishlist, collection: @wishlists %>
-            or
-          <% end %>
-          <%= label_tag :new_wishlist_name %>
-          <%= text_field_tag :new_wishlist_name %>
-          <%= f.submit "add to wishlist" %>
-          <% end %>
-        </div>
-        <% end %>
+
 
         <h3><b><font size="6">Reviews:</font></b></h3>
         <div class="positionReview">
