@@ -2,6 +2,8 @@ ActiveAdmin.register User do
   form do |f|
     f.inputs "Identity" do
       f.input :email
+      f.input :password
+      f.input :password_confirmation
     end
     f.inputs "Admin" do
       f.input :admin
@@ -9,7 +11,7 @@ ActiveAdmin.register User do
     f.actions
   end
 
-  permit_params :email, :admin
+  permit_params :email, :password, :password_confirmation, :admin
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
