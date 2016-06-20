@@ -55,9 +55,11 @@ ActiveRecord::Schema.define(version: 20160620124431) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "product_id"
+    t.integer  "user_id"
   end
 
   add_index "reviews", ["product_id"], name: "index_reviews_on_product_id", using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
@@ -74,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160620124431) do
     t.datetime "updated_at",                             null: false
     t.boolean  "merchant"
     t.string   "photo"
+    t.string   "name"
     t.boolean  "admin",                  default: false, null: false
   end
 

@@ -24,6 +24,17 @@
   border: 0px;
 }
 
+#user_name{
+  width: 100%;
+  box-shadow: none;
+  border: 0px;
+}
+
+#user_name:focus{
+  box-shadow: none;
+  border: 0px;
+}
+
 .email{
   box-shadow: none;
   border: 0px;
@@ -83,8 +94,8 @@
 }
 
 .loginlinks a:hover{
-border-bottom: 1px solid $brand-color;
-text-decoration: none;
+  border-bottom: 1px solid $brand-color;
+  text-decoration: none;
 }
 
 .checkbox{
