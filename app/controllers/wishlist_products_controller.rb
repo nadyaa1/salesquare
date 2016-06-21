@@ -20,6 +20,8 @@ class WishlistProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
+
+
   private
 
   def wishlist_product_params
