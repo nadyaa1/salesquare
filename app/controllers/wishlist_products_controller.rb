@@ -20,7 +20,12 @@ class WishlistProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
+  def destroy
+    @wishlist_product = current_user.wishlist_products.find(params[:id])
+    @wishlist_product.destroy
 
+    redirect_to account_wishlists_path
+  end
 
   private
 

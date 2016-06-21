@@ -13,7 +13,7 @@
         <div class="wishlist-content">
           <p><%= wishlist_product.product.name %></p>
           <%= cl_image_tag wishlist_product.product.photo.url(:wishlist) %>
-          <%= link_to "Delete", account_wishlist_path(wishlist_product), method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to "Delete", account_wishlist_product_path(wishlist_product), method: :delete, data: { confirm: 'Are you sure?'} %>
         </div>
         <% end %>
         <% end %>

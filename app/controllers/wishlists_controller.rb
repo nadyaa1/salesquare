@@ -5,11 +5,8 @@ class WishlistsController < ApplicationController
   end
 
   def destroy
-    @wishlist_product = WishlistProduct.find(params[:id])
-    @wishlist_product.destroy
-    @wishlists = Wishlists.find(params[:id])
-    @wishlists.destroy
+    @wishlist = current_user.wishlists.find(params[:id])
+    @wishlist.destroy
     redirect_to account_wishlists_path
   end
-
 end
