@@ -8,6 +8,7 @@
 
         <% @wishlists.each do |wishlist| %>
         <h3><%= wishlist.name %></h3> <i class="fa fa-times"></i> <i class="fa fa-pencil"></i>
+          <%= link_to "Delete Wishlist", account_wishlist_path(wishlist), method: :delete, data: { confirm: 'Are you sure?'} %>
         <% wishlist.wishlist_products.each do |wishlist_product| %>
         <div class="wishlist-content">
           <p><%= wishlist_product.product.name %></p>
