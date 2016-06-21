@@ -6,13 +6,35 @@
   <%= f.error_notification %>
 <div class="form-inputs salelogin">
 
-    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "email" %>
-    <%= f.input :password, required: true, label: false, placeholder: "password" %>
-    <%= f.input :password_confirmation, required: true, label: false, placeholder: "confirm password" %>
-    <%= f.input :photo, label: false %>
+<div class="form-group">
+    <%= f.input :name, required: true,
+    autofocus: true, label: false,
+    placeholder: "username",
+    class: 'finput' %>
+</div>
+    <%= f.input :email,
+    required: true, autofocus: true,
+    label: false,
+    placeholder: "email" %>
+
+    <%= f.input :password,
+    required: true,
+    label: false,
+    placeholder: "password" %>
+
+    <%= f.input :password_confirmation,
+    required: true,
+    label: false,
+    placeholder: "confirm password" %>
+
+    <%= f.input :photo,
+    label: false %>
+
     <%= f.input :photo_cache, as: :hidden %>
 
-    <%= f.input_field :merchant, as: :boolean, inline_label: "Merchant?" %>
+    <%= f.input_field :merchant, as: :boolean,
+    inline_label: "Merchant?" %>
+
   </div>
 <div class="f-actions">
   <div class="form-actions">

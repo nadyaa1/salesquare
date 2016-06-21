@@ -22,8 +22,16 @@
           <p class="flex-styling-small"><%= @product.description %></p>
           <p class="flex-styling-small"><%= @product.url %></p>
           <div class="text-inline">
-          <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
-            <button type="button" class="btn btn-primary btn-lg">Add to Wishlist</button>
+            <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
+            <% if user_signed_in? %>
+           <!--  <a href="#add-to-wishlist" class="btn btn-primary btn-lg">Add to Wishlist</a> -->
+           <%= link_to "#addToWishlist", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
+            <% end %>
+            <%= render "addToWishlist" %>
+            <% else %>
+            <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg" %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -31,27 +39,37 @@
   </div>
 
 
+
   <hr></hr>
   <div class="row">
     <div class="col-xs-12">
-      <div class="productShow-wrapper">
-      <h3><b><font size="6">Reviews:</font></b></h3>
+
+      <div class="show-wrapper">
+      <div class="reviewintro">
+      <h1>Reviews</h1>
+
+
+
+
         <div class="positionReview">
           <%= pluralize @product.reviews.size, "review" %>
+            </div>
           <div id="reviews">
             <% if @product.reviews.blank? %>
             Be the first to leave a review for <%= @product.name %>
             <% else %>
             <% @product.reviews.each do |review| %>
-            <div id="reviews-box">
+
+            <div class="reviews-box">
             <%= render 'reviews/show', review: review %>
+
             </div>
             <% end %>
             <% end %>
           </div>
 
           <%= render 'reviews/form', product: @product, review: @review %>
-        </div>
+
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = Review.new(review_params)
     @review.product = @product
+    @review.user = current_user
     if @review.save
       respond_to do |format|
         format.html { redirect_to product_path(@product) }
@@ -21,4 +22,6 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:description, :title, :rating)
   end
+
+
 end
