@@ -1,3 +1,46 @@
 // Place all the styles related to the profile/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.profileheader{
+  padding-top: 20px;
+  background-color: white;
+}
+
+.profileheader h3{
+  margin-bottom: 0px;
+}
+
+.username{
+  padding: 15px;
+}
+
+.profileheader img{
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-button{
+  background-color: white;
+  border-top: 1px solid $brand-color;
+  border-bottom: 1px solid $brand-color;
+  color: grey;
+  transition: 0.3s;
+
+}
+
+.profile-button:hover{
+  background-color: $brand-color;
+  text-decoration: none;
+  color: white;
+}
+
+.paddingfix{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.paddingfix h3{
+  margin-top: 5px;
+}
