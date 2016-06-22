@@ -9,8 +9,16 @@ class ProductsController < ApplicationController
     elsif params[:category] == "kids"
       @products = Product.where(category: "kids")
     else
-      @products = Product.all
+      if params[:search_term]
+        @products = search_results
+      else
+       @products = Product.all
+      end
     end
+  end
+
+  def search_results
+    PgSearch.multisearch(params[:search_term])
   end
 
   def show

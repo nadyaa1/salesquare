@@ -4,4 +4,7 @@ class Product < ActiveRecord::Base
 
   validates :name, :category, :price, :url, :photo, :description, presence: {message: "Field is required"}
   mount_uploader :photo, PhotoUploader
+
+  include PgSearch
+  multisearchable against: [ :name, :description ]
 end
