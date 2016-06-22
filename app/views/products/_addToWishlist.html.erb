@@ -20,11 +20,13 @@
           <%= simple_form_for [@product, @wishlist_product] do |f| %>
           <% if @wishlists.any? %>
           <%= f.association :wishlist, collection: @wishlists %>
-          or
           <% end %>
-          <%= label_tag :new_wishlist_name %>
+
+          <p>add a new wishlist</p>
           <%= text_field_tag :new_wishlist_name %>
-          <%= f.submit "add to wishlist" %>
+          <br><br>
+
+          <%= f.submit "add to wishlist", class: "btn btn-primary" %>
           <% end %>
         </div>
         <% end %>
@@ -32,15 +34,7 @@
 
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                    Save changes
-                </button>
-            </div>
+
         </div>
     </div>
 </div>
