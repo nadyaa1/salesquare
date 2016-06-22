@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resource :account, only: [:show, :edit, :update] do
-    resources :wishlists,         only: [:index, :destroy]
+    resources :wishlists,         only: [:index, :edit, :update, :destroy]
     resources :wishlist_products, only: [:destroy]
   end
 
