@@ -2,13 +2,13 @@
 <div class="hidden-sm hidden-xs">
   <div class="container-categories">
     <div class="text-center">
-      <li><%= link_to "Women", products_path(category: "women") %></li>
-      <li><%= link_to "Shoes", products_path(category: "shoes") %></li>
-      <li><%= link_to "Bags", products_path(category: "bags") %></li>
-      <li><%= link_to "Men", products_path(category: "men") %></li>
-      <li><%= link_to "Kids", products_path(category: "kids") %></li>
-      <li><%= link_to "Dresses", products_path(category: "dresses") %></li>
-      <li><%= link_to "Coats", products_path(category: "coats") %></li>
+      <li class="<%= category_filter_css_class("women") %>"><%= link_to "Women", products_path(category: "women") %></li>
+      <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shoes", products_path(category: "shoes") %></li>
+      <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Bags", products_path(category: "bags") %></li>
+      <li class="<%= category_filter_css_class("men") %>"><%= link_to "Men", products_path(category: "men") %></li>
+      <li class="<%= category_filter_css_class("kids") %>"><%= link_to "Kids", products_path(category: "kids") %></li>
+      <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Dresses", products_path(category: "dresses") %></li>
+      <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Coats", products_path(category: "coats") %></li>
     </div>
   </div>
 </div>

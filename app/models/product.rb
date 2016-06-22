@@ -6,5 +6,5 @@ class Product < ActiveRecord::Base
   mount_uploader :photo, PhotoUploader
 
   include PgSearch
-  multisearchable against: [ :name, :description ]
+  pg_search_scope :search, against: [ :name, :description, :category ]
 end

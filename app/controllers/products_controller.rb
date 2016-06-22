@@ -2,23 +2,26 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only:[ :index, :show ]
 
   def index
-    if params[:category] == "men"
-      @products = Product.where(category: "men")
-    elsif params[:category] == "women"
-      @products = Product.where(category: "women")
-    elsif params[:category] == "kids"
-      @products = Product.where(category: "kids")
+    @category = params[:category]
+    @search_term = params[:search_term]
+
+    if @search_term
+      @products = search_results
     else
-      if params[:search_term]
-        @products = search_results
-      else
-       @products = Product.all
-      end
+      @products = Product.all
+    end
+
+    if @category == "men"
+      @products = @products.where(category: "men")
+    elsif @category == "women"
+      @products = @products.where(category: "women")
+    elsif @category == "kids"
+      @products = @products.where(category: "kids")
     end
   end
 
   def search_results
-    PgSearch.multisearch(params[:search_term])
+    Product.search(@search_term)
   end
 
   def show
