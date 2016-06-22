@@ -3,20 +3,33 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <div class="wishlist-wrapper">
+
 
         <% @wishlists.each do |wishlist| %>
-        <h3><%= wishlist.name %></h3> <i class="fa fa-times"></i> <i class="fa fa-pencil"></i>
-        <% wishlist.products.each do |wishlist_product| %>
+      <div class="col-xs-12 col-md-4">
+      <div class="wishlist-wrapper">
+        <h3><%= wishlist.name %></h3>
+        <%= link_to account_wishlist_path(wishlist), method: :delete, data: { confirm: 'You are about to delete the wishlist, are you sure?'} do %>
+        <i class="fa fa-times-circle"></i>
+        <% end %>
+
+
+        <% wishlist.wishlist_products.each do |wishlist_product| %>
         <div class="wishlist-content">
-        <p><%= wishlist_product.name %></p>
-          <%= cl_image_tag wishlist_product.photo.url(:wishlist) %>
+
+          <%= cl_image_tag wishlist_product.product.photo.url(:wishlist) %>
+          <p><%= wishlist_product.product.name %></p>
+
+
+          <%= link_to account_wishlist_product_path(wishlist_product), method: :delete, data: { confirm: 'You are about to delete the product from your wishlist, are you sure?'} do%>
+          <i class="fa fa-times-circle"></i>
+          <% end %>
         </div>
+      </div>
+    </div>
         <% end %>
         <% end %>
 
-      </div>
-    </div>
+
   </div>
 </div>

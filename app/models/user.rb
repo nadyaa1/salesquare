@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
          has_many :reviews
 
          has_many :wishlists
+         has_many :wishlist_products, through: :wishlists
 
 
   mount_uploader :photo, PhotoUploader

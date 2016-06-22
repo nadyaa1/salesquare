@@ -4,6 +4,8 @@
 .wishlist-wrapper{
   background-color: lightgrey;
   padding: 3px;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px -6px #222;
 }
 
 .wishlist-wrapper h3{
@@ -12,16 +14,23 @@
   margin: 0px;
 }
 
+.wishlist-wrapper i{
+  float: right;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
 .wishlist-content{
  margin: 5px 5px 10px 5px;
  background-color: white;
  border-radius: 2px;
  padding: 5px;
+ box-shadow: 0 4px 6px -6px #222;
 }
 
 .wishlist-content img{
   display: inline-block;
-  float: right;
+  margin-right: 15px;
 
 }
 .wishlist-content p{
@@ -35,3 +44,5 @@
   display: flex;
   align-items: flex-end;
 }
+
+

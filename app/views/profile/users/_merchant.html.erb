@@ -1,2 +1,46 @@
-<h1><%= @user.email %></h1>
-<%= image_tag @user.photo %>
+
+
+<div class="col-xs-12">
+
+<div class="container">
+  <div class="row">
+    <div class="hidden-xs col-md-4">
+    </div>
+    <div class="paddingfix col-xs-12 col-md-4">
+      <div class="profileheader text-center">
+          <%= image_tag @user.photo, class: "img-rounded" %>
+        <h3 class="username"><%= @user.name %></h3>
+
+        <!-- link to products -->
+
+        <%= link_to merchant_products_path do %>
+        <div class="paddingfix col-xs-6">
+        <div class="profile-button">
+          <h3>  <%= current_user.products.count %> </h3>
+          <p>Products</p>
+        </div>
+        <% end %>
+        </div>
+        <!-- end link to products -->
+
+        <!-- link to wishlists -->
+
+        <%= link_to account_wishlists_path do %>
+        <div class="paddingfix col-xs-6">
+        <div class="profile-button">
+          <h3>  <%= 1 %> </h3>
+          <p>stuff</p>
+        </div>
+        <% end %>
+        </div>
+        <!-- end link to wishlists -->
+        <i class="fa fa-times-circle"></i> delete profile
+        <i class="fa fa-pencil"></i> edit profile
+
+      </div>
+    </div>
+    <div class="hidden-xs col-md-4">
+    </div>
+  </div>
+</div>
+</div>
