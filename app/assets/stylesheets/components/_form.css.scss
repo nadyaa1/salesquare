@@ -1,0 +1,113 @@
+.login-wrapper{
+  background-color: white;
+  width: 100vh;
+  background-size: cover;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -6px #222;
+}
+
+.salelogin{
+  padding: 10px;
+  background-color: white;
+}
+
+//form input styling
+
+.finput{
+  width: 100%;
+  box-shadow: none;
+  border: 0px;
+}
+.finput:focus{
+  box-shadow: none;
+  border: 0px;
+}
+
+#user_name{
+  width: 100%;
+  box-shadow: none;
+  border: 0px;
+}
+
+#user_name:focus{
+  box-shadow: none;
+  border: 0px;
+}
+
+.email{
+  box-shadow: none;
+  border: 0px;
+}
+.email:focus{
+  box-shadow: none;
+  border: 0px;
+}
+
+.password{
+  box-shadow: none;
+  border: 0px;
+}
+.password:focus{
+  box-shadow: none;
+  border: 0px;
+}
+
+
+//end form input styiling
+
+
+.f-actions{
+  background-color: $brand-color;
+}
+
+.loginn{
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  color: white;
+}
+.loginn:hover{
+  background-color: transparent;
+  color: white;
+}
+.sharedlinks{
+  display: inline;
+}
+
+.loginlinks{
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexlink{
+  flex: 1 0 20%;
+}
+
+.loginlinks a{
+  text-align: center;
+  width: 180px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-bottom: 0px;
+  transition: 0.3s
+}
+
+.loginlinks a:hover{
+  border-bottom: 1px solid $brand-color;
+  text-decoration: none;
+}
+
+.checkbox{
+  text-align: left;
+  padding-left: 5px;
+}
+
+.photo-upload{
+  display: flex;
+  padding: 6px 12px;
+}
+
+.photo-label{
+  padding-right: 10px;
+}
