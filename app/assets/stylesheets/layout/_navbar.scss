@@ -30,7 +30,7 @@
 .navbar-wagon-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 300px;
   z-index: 100;
 }
@@ -39,7 +39,7 @@
 .navbar-wagon-item {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 /* Navbar standard link */
@@ -134,7 +134,10 @@
 .add-product a {
   color: black;
   font-size: 14px;
-  padding-right: 5px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add-product a:hover {
