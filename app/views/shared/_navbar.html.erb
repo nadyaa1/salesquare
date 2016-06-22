@@ -82,8 +82,9 @@
 <div class="container text-center center-searchbar">
   <div class="row">
     <div class="hidden-xs hidden-sm">
-      <form action="" class="navbar-wagon-search">
-        <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <form action="/products" method="get" class="navbar-wagon-search">
+        <%= hidden_field_tag :category, @category %>
+        <input type="text" name="search_term" class="navbar-wagon-search-input" placeholder="Search something" value="<%= @search_term %>">
         <button type="submit" class="navbar-wagon-search-btn">
         </button>
         <i class="fa fa-search"></i>
