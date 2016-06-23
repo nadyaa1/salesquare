@@ -7,6 +7,7 @@
           <%= image_tag @product.photo.url(:product_show), class: "product-image" %>
         </div>
       </div>
+
       <div class="col-xs-6 col-md-2 col-lg-2">
         <div class="pimage1">
           <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
@@ -14,6 +15,7 @@
           <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
         </div>
       </div>
+
       <div class="col-xs-6 col-md-5 col-lg-6">
         <div class="positionText">
           <h2 class="flex-styling-small"><%= @product.name %></h2>
@@ -24,8 +26,7 @@
           <div class="text-inline">
             <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
             <% if user_signed_in? %>
-           <!--  <a href="#add-to-wishlist" class="btn btn-primary btn-lg">Add to Wishlist</a> -->
-           <%= link_to "#addToWishlist", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
+            <%= link_to "#addToWishlist", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
             <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
             <% end %>
             <%= render "addToWishlist" %>
@@ -35,41 +36,31 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-
-
-  <hr></hr>
-  <div class="row">
-    <div class="col-xs-12">
-
-      <div class="show-wrapper">
-      <div class="reviewintro">
-      <h1>Reviews</h1>
-
-
-
-
-        <div class="positionReview">
-          <%= pluralize @product.reviews.size, "review" %>
+      <hr></hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="show-wrapper">
+            <div class="reviewintro">
+              <h1>Reviews</h1>
+              <div class="positionReview">
+                <%= pluralize @product.reviews.size, "review" %>
+              </div>
+              <div id="reviews">
+                <% if @product.reviews.blank? %>
+                Be the first to leave a review for <%= @product.name %>
+                <% else %>
+                <% @product.reviews.each do |review| %>
+                <div class="reviews-box">
+                  <%= render 'reviews/show', review: review %>
+                </div>
+                <% end %>
+                <% end %>
+              </div>
+              <%= render 'reviews/form', product: @product, review: @review %>
             </div>
-          <div id="reviews">
-            <% if @product.reviews.blank? %>
-            Be the first to leave a review for <%= @product.name %>
-            <% else %>
-            <% @product.reviews.each do |review| %>
-
-            <div class="reviews-box">
-            <%= render 'reviews/show', review: review %>
-
-            </div>
-            <% end %>
-            <% end %>
           </div>
-
-          <%= render 'reviews/form', product: @product, review: @review %>
-
+        </div>
       </div>
     </div>
   </div>
