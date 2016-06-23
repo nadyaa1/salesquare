@@ -15,56 +15,39 @@ aria-labelledby="myModalLabel" aria-hidden="true">
 
   <div class="modal-body">
 
-<<<<<<< HEAD
     <% if user_signed_in? %>
     <div id="add-to-wishlist">
       <%= simple_form_for [@product, @wishlist_product] do |f| %>
       <% if @wishlists.any? %>
       <%= f.association :wishlist, collection: @wishlists %>
-      or
       <% end %>
-      <%= label_tag :new_wishlist_name %>
+
+      <p>add a new wishlist</p>
       <%= text_field_tag :new_wishlist_name %>
-      <%= f.submit "add to wishlist" %>
-      <% end %>
+      <br><br>
+
     </div>
-    <% end %>
-=======
-        <% if user_signed_in? %>
-        <div id="add-to-wishlist">
-          <%= simple_form_for [@product, @wishlist_product] do |f| %>
-          <% if @wishlists.any? %>
-          <%= f.association :wishlist, collection: @wishlists %>
-          <% end %>
-
-          <p>add a new wishlist</p>
-          <%= text_field_tag :new_wishlist_name %>
-          <br><br>
-
-          <%= f.submit "add to wishlist", class: "btn btn-primary" %>
-          <% end %>
-        </div>
-        <% end %>
->>>>>>> 7442b476c660d7a1673667e77c79c69b6849b353
 
 
   </div>
 
-<<<<<<< HEAD
+
   <div class="modal-footer">
     <button type="button" class="btn btn-default"
     data-dismiss="modal">
     Close
   </button>
-  <button type="button" class="btn btn-primary">
-    Save changes
-  </button>
-</div>
-</div>
-</div>
-=======
 
-        </div>
-    </div>
->>>>>>> 7442b476c660d7a1673667e77c79c69b6849b353
+  <%= f.submit "add to wishlist", class: "btn btn-primary" %>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<% end %>
+<% end %>
 </div>
