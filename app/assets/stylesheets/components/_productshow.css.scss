@@ -10,12 +10,18 @@
   color: $brand-color;
 }
 
-.reviewdesc{
-  max-widht: 300px;
+.fa-arrow-up{
+  padding-left: 40px;
+  padding-bottom: 5px;
 }
 
-.rating-stars{
-  padding-right: 50px;
+.fa-arrow-down{
+  padding-left: 40px;
+}
+
+
+.reviewdesc{
+  max-widht: 300px;
 }
 
 .reviewshow{
@@ -29,4 +35,9 @@ padding: 10px;
 
 .show-wrapper{
   padding-top: 10px;
+}
+
+.container_show{
+  width: 1000px;
+  margin: 0 auto;
 }
