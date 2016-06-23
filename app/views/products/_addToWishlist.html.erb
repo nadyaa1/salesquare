@@ -15,6 +15,7 @@ aria-labelledby="myModalLabel" aria-hidden="true">
 
   <div class="modal-body">
 
+<<<<<<< HEAD
     <% if user_signed_in? %>
     <div id="add-to-wishlist">
       <%= simple_form_for [@product, @wishlist_product] do |f| %>
@@ -28,10 +29,28 @@ aria-labelledby="myModalLabel" aria-hidden="true">
       <% end %>
     </div>
     <% end %>
+=======
+        <% if user_signed_in? %>
+        <div id="add-to-wishlist">
+          <%= simple_form_for [@product, @wishlist_product] do |f| %>
+          <% if @wishlists.any? %>
+          <%= f.association :wishlist, collection: @wishlists %>
+          <% end %>
+
+          <p>add a new wishlist</p>
+          <%= text_field_tag :new_wishlist_name %>
+          <br><br>
+
+          <%= f.submit "add to wishlist", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <% end %>
+>>>>>>> 7442b476c660d7a1673667e77c79c69b6849b353
 
 
   </div>
 
+<<<<<<< HEAD
   <div class="modal-footer">
     <button type="button" class="btn btn-default"
     data-dismiss="modal">
@@ -43,4 +62,9 @@ aria-labelledby="myModalLabel" aria-hidden="true">
 </div>
 </div>
 </div>
+=======
+
+        </div>
+    </div>
+>>>>>>> 7442b476c660d7a1673667e77c79c69b6849b353
 </div>

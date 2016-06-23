@@ -1,10 +1,17 @@
 <div class="text-center"><h1>Your Wishlists</h1>
   <p>Go to a product and click 'add to wishlist'</p>
 </div>
+
+
 <div class="container">
+
   <div class="row">
+
+    <% @wishlists.each do |wishlist| %>
+
     <div class="col-xs-12 col-md-4">
       <div class="wishlist-wrapper">
+
 
         <% @wishlists.each do |wishlist| %>
         <h3><%= wishlist.name %></h3> <i class="fa fa-times"></i> <i class="fa fa-pencil"></i>
@@ -15,17 +22,34 @@
             <% end %>
             <%= render partial: "changeWishlistName", locals: { wishlist: wishlist } %>
 
+        <h3><%= wishlist.name %></h3>
+
+        <%= link_to account_wishlist_path(wishlist), method: :delete, data: { confirm: 'You are about to delete the wishlist, are you sure?'} do %>
+        <i class="fa fa-times-circle"></i>
+        <% end %>
+
+
 
         <% wishlist.wishlist_products.each do |wishlist_product| %>
         <div class="wishlist-content">
-          <p><%= wishlist_product.product.name %></p>
+
           <%= cl_image_tag wishlist_product.product.photo.url(:wishlist) %>
-          <%= link_to "Delete", account_wishlist_product_path(wishlist_product), method: :delete, data: { confirm: 'Are you sure?'} %>
+          <p><%= wishlist_product.product.name %></p>
+
+
+          <%= link_to account_wishlist_product_path(wishlist_product), method: :delete, data: { confirm: 'You are about to delete the product from your wishlist, are you sure?'} do%>
+          <i class="fa fa-times-circle"></i>
+          <% end %>
+
         </div>
-        <% end %>
+
+
         <% end %>
 
+
       </div>
+
     </div>
+ <% end %>
   </div>
 </div>
