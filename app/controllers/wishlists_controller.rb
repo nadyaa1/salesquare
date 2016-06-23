@@ -5,13 +5,14 @@ class WishlistsController < ApplicationController
   end
 
   def edit
-    @wishlist = Wishlist.find(params[:id])
+    @wishlist = current_user.wishlists.find(params[:id])
   end
 
   def update
-    @wishlist = Wishlist.find(params[:id])
+    @wishlist = current_user.wishlists.find(params[:id])
+
     if @wishlist.update(account_wishlist_params)
-      redirect_to root_path
+      redirect_to account_wishlists_path
       flash[:notice] = "it worked"
     else
       redirect_to root_path

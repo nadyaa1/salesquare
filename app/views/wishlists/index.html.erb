@@ -10,7 +10,7 @@
         <h3><%= wishlist.name %></h3> <i class="fa fa-times"></i> <i class="fa fa-pencil"></i>
           <%= link_to "Delete Wishlist", account_wishlist_path(wishlist), method: :delete, data: { confirm: 'Are you sure?'} %>
 
-           <%= link_to "##{wishlist.id}modal", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
+           <%= link_to "##{wishlist.id}modal", class: "btn btn-primary btn-sm", "data-toggle" => "modal" do %>
             <i class="fa fa-plus-circle" aria-hidden="true"></i> change name
             <% end %>
             <%= render partial: "changeWishlistName", locals: { wishlist: wishlist } %>

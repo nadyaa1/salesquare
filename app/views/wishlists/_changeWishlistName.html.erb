@@ -12,8 +12,8 @@
       </div>
       <div class="modal-body">
         <% if user_signed_in? %>
-        <div id="<%= wishlist.id %>modal">
-          <%= simple_form_for [current_user, wishlist], url: account_wishlist_path(current_user, wishlist) do |f| %>
+        <div>
+          <%= simple_form_for [current_user, wishlist], url: account_wishlist_path(wishlist) do |f| %>
           <%= f.input :name, label: wishlist.name %>
         </div>
       </div>
