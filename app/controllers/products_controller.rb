@@ -17,6 +17,14 @@ class ProductsController < ApplicationController
       @products = @products.where(category: "women")
     elsif @category == "kids"
       @products = @products.where(category: "kids")
+    elsif @category == "bags"
+      @products = @products.where(category: "bags")
+    elsif @category == "shoes"
+      @products = @products.where(category: "shoes")
+    elsif @category == "dresses"
+      @products = @products.where(category: "dresses")
+    elsif @category == "coats"
+      @products = @products.where(category: "coats")
     end
   end
 
