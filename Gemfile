@@ -12,6 +12,7 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
 gem 'pg_search'
+gem 'money-rails'
 
 gem 'sass-rails'
 gem 'jquery-rails'
