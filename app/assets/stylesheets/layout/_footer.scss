@@ -4,22 +4,19 @@
   background: #FFFFFF;
   color: #232323;
   margin: 0 auto;
-  box-shadow: 0 4px 6px -6px #222;
   padding: 20px;
+  position: absolute;
+  bottom: 0;
+  // box-shadow: 0 4px -6px 0px #222;
 }
 
 #footer p {
-  margin-top: 1px;
   padding: 0;
 }
 
 #footer ul {
   margin-top: 10px;
   position: relative;
-}
-
-.footer-pages {
-  word-spacing: 19px;
 }
 
 .footer-icons i {
@@ -38,6 +35,10 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.9em;
+}
+
+.footer-pages {
+  word-spacing: 19px;
 }
 
 .footer-pages a {

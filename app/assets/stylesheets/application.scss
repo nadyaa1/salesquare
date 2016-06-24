@@ -20,19 +20,19 @@
 @import "reviews";
 @import "profile/users";
 
-// Fonts
-h3{
-  font-family: $subheader-font;
-  font-size: 18px;
-}
-
+// Custom
 body{
-  background-color: #eeeeee;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  background-color: #F7F9FA;
 }
 
 .website-container{
-  flex: 1;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.no-gutter{
+  padding-left: 0px;
+  padding-right: 0px;
 }
