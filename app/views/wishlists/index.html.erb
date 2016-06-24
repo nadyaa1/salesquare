@@ -6,9 +6,9 @@
     <% @wishlists.each do |wishlist| %>
     <div class="col-xs-12 col-md-4">
       <div class="wishlist-wrapper">
-        <h3><%= wishlist.name %></h3> <i class="fa fa-times"></i> <i class="fa fa-pencil"></i>
-        <%= link_to "##{wishlist.id}modal", class: "btn btn-primary btn-sm", "data-toggle" => "modal" do %>
-        <i class="fa fa-plus-circle" aria-hidden="true"></i> change name
+        <h3><%= wishlist.name %></h3>
+        <%= link_to "##{wishlist.id}modal", "data-toggle" => "modal" do %>
+        <i class="fa fa-pencil"></i>
         <% end %>
         <%= render partial: "changeWishlistName", locals: { wishlist: wishlist } %>
 
@@ -19,8 +19,12 @@
         <% wishlist.wishlist_products.each do |wishlist_product| %>
 
         <div class="wishlist-content">
-          <%= cl_image_tag wishlist_product.product.photo.url(:wishlist) %>
-          <p><%= wishlist_product.product.name %></p>
+          <%= cl_image_tag wishlist_product.product.photo.url(:wishlist), class: "pic-size" %>
+          <div class="wishlist-content-info">
+            <p><%= wishlist_product.product.name %></p>
+
+            <p><%= humanized_money_with_symbol(wishlist_product.product.price) %></p>
+          </div>
           <%= link_to account_wishlist_product_path(wishlist_product), method: :delete, data: { confirm: 'You are about to delete the product from your wishlist, are you sure?'} do%>
           <i class="fa fa-times-circle"></i>
           <% end %>
