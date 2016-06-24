@@ -41,7 +41,7 @@
 
 
               <div class="pcategory">
-                <p><%= humanized_money_with_symbol(p.price) %></p>
+                <%= humanized_money_with_symbol(p.price) %>
               </div>
               <hr/>
               <%= link_to product_path(p), class: "showproduct" do %>
