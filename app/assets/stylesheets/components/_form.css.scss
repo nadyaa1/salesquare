@@ -1,15 +1,22 @@
-.login-wrapper{
-  background-color: white;
-  width: 100vh;
-  background-size: cover;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -6px #222;
+// .login-wrapper{
+//   background-color: white;
+//   width: 100vh;
+//   background-size: cover;
+//   margin: 0 auto;
+//   overflow: hidden;
+//   box-shadow: 0 4px 6px -6px #222;
+// }
+.fallback-container {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .salelogin{
   padding: 10px;
   background-color: white;
+  width: 330px;
 }
 
 //form input styling
@@ -125,4 +132,7 @@
 
 .already-registered {
   margin-top: 10px;
+}
+
+.form-wrapper{
 }
