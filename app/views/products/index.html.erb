@@ -14,49 +14,54 @@
 </div>
 <!-- end category bar -->
 
-
-<!-- <div class="container-fluid"> -->
+<div class="marginfix-top">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="hidden-sm col-md-2">
+    </div>
+    <div class="col-xs-12 col-md-8">
       <br>
       <div class="stripetrough text-center">
         <h2><span>Find what you are looking for</span></h2>
         <p> A selection of the best products for the best prices</p>
       </div>
 
-      <div class="container-fluid text-center">
+      <div class="container-fluid text-center ">
         <div class="row">
           <div class="products">
+
             <% @products.each do |p| %>
+            <%= link_to product_path(p) do %>
             <div class="col-xs-12 col-md-3 paddingfix">
-              <div class="products-wrapper">
-                <div class="pimage">
-                 <%= cl_image_tag p.photo.url(:bright_face) %>
+              <div class="productshow-wrapper">
+                <div class="pimage"
+                style="background-image:
+                url('<%= p.photo %>')">
+
                </div>
                <div class="pname">
-                <h3><%= p.name %></h3>
+
+
+                <h3><%= truncate(p.name, length: 21) %></h3>
               </div>
 
 
               <div class="pcategory">
-                <%= humanized_money_with_symbol(p.price) %>
+               € <%= p.price %>
               </div>
-              <hr/>
-              <%= link_to product_path(p), class: "showproduct" do %>
 
-              <div class="pcatlink">
-                Show
-              </div>
-              <% end %>
 
             </div>
           </div>
+          <% end %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
+  <div class="hidden-sm col-md-2">
+  </div>
 </div>
-<!-- </div> -->
-
-
+</div>
+</div>
+<div class="marginfix"></div>
