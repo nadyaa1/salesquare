@@ -25,22 +25,7 @@ body{
   background-color: #F7F9FA;
 }
 
-.website-container{
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
 .no-gutter{
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.website-container{
-  // flex: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
 }
