@@ -36,3 +36,11 @@ body{
   padding-left: 0px;
   padding-right: 0px;
 }
+
+.website-container{
+  // flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}

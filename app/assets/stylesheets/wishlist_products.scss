@@ -21,11 +21,21 @@
 }
 
 .wishlist-content{
+  justify-content: space-between;
+  text-align: left;
+  display: flex;
  margin: 5px 5px 10px 5px;
  background-color: white;
  border-radius: 2px;
  padding: 5px;
  box-shadow: 0 4px 6px -6px #222;
+}
+
+
+.wishlist-content-info {
+  width: 145px;
+  display: flex;
+  flex-direction:column;
 }
 
 .wishlist-content img{
@@ -36,7 +46,7 @@
 .wishlist-content p{
   display: inline-block;
   padding: 0px;
-  margin: 0px;
+  margin-bottom: 10px;
 }
 
 .wishicons{
@@ -45,4 +55,7 @@
   align-items: flex-end;
 }
 
+// .pic-size{
+//   width: 100px;
+// }
 
