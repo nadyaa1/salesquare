@@ -1,47 +1,48 @@
-
+<!-- product -->
 <div class="container_show">
-  <div class="wrapper-white">
-    <div class="row">
-      <div class="col-xs-12 col-md-5 col-lg-5">
-        <div class="pimage">
-          <%= image_tag @product.photo.url(:product_show), class: "product-image" %>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6  col-md-offset-3 pshow-wrapper ">
+      <!-- product content -->
 
-      <div class="col-xs-6 col-md-2 col-lg-2">
-        <div class="pimage1">
-          <i class="fa fa-arrow-up" aria-hidden="true"></i>
-          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
-          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
-          <%= image_tag "http://unsplash.it/101/101", class: "product-image-small" %>
-          <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        </div>
-      </div>
-
-      <div class="col-xs-6 col-md-5 col-lg-5">
-        <div class="positionText">
-          <h2 class="flex-styling-small"><%= @product.name %></h2>
-          <p class="flex-styling-small" ><%= humanized_money_with_symbol(@product.price) %></p>
-          <p><b>Description:</b></p>
-          <p class="flex-styling-small"><%= @product.description %></p>
-          <p class="flex-styling-small"><%= @product.url %></p>
-          <div class="text-inline">
-            <button type="button" class="btn btn-primary btn-lg">Buy Now</button>
-            <% if user_signed_in? %>
-            <%= link_to "#addToWishlist", class: "btn btn-primary btn-lg", "data-toggle" => "modal" do %>
-            <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
-            <% end %>
-            <%= render "addToWishlist" %>
-            <% else %>
-            <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-
-      <hr></hr>
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-md-6 paddingfix">
+
+        <div class="pimage-show" style=" background-image: url('<%= @product.photo%> ">
+        </div>
+
+      </div>
+
+      <div class="col-xs-12 col-md-6 ">
+
+       <h1> <%= truncate(@product.name, length: 21) %> </h1>
+       <%= @product.category %>
+
+       <h3>€ <%= @product.price_cents %> </h3>
+
+       <h3 class="margfix">Description </h3>
+       <p> <%= truncate(@product.description, length: 50) %></p>
+
+       <div class="showbuttons">
+         <button class="btn btn-primary"> go to shop </button>
+         <% if user_signed_in? %>
+         <%= link_to "#addToWishlist", class: "btn btn-primary", "data-toggle" => "modal" do %>
+         <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
+         <% end %>
+         <%= render "addToWishlist" %>
+         <% else %>
+         <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg]
+         " %>
+         <% end %>
+       </div>
+     </div>
+   </div>
+
+   <!-- end product content -->
+   <!-- product end -->
+
+
+<div class="row">
+        <div class="col-xs-12 col-md-6  col-md-offset-3 paddingfix">
           <div class="show-wrapper">
             <div class="reviewintro">
               <h1>Reviews</h1>
@@ -67,6 +68,3 @@
     </div>
   </div>
 </div>
-
-
-
