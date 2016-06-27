@@ -1,11 +1,12 @@
-// .login-wrapper{
-//   background-color: white;
-//   width: 100vh;
-//   background-size: cover;
-//   margin: 0 auto;
-//   overflow: hidden;
-//   box-shadow: 0 4px 6px -6px #222;
-// }
+.login-wrapper{
+  background-color: white;
+  width: 100vh;
+  background-size: cover;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -6px #222;
+}
+
 .fallback-container {
   flex: 1;
   justify-content: center;
@@ -17,6 +18,10 @@
   padding: 10px;
   background-color: white;
   width: 330px;
+}
+
+.submit-button{
+  padding-top: 15px;
 }
 
 //form input styling
@@ -134,5 +139,9 @@
   margin-top: 10px;
 }
 
-.form-wrapper{
+.form-wrapper {
 }
+
+// .registration-banner {
+//   background: url("https://source.unsplash.com/ycVFts5Ma4s");
+// }
