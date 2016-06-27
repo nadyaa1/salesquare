@@ -11,10 +11,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <% if params["controller"] == "users/registrations" && params["action"] == "new" %>
-    <div class="fallback-container">
-     <% else %>
-    <div class="website-container">
+    <% if params["controller"] == "users/registrations" %>
+      <div class="fallback-container">
+    <% else %>
+      <div class="website-container">
     <% end %>
       <%= yield %>
     </div>
