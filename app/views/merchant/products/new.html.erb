@@ -1,7 +1,9 @@
-<br>
-<div class="login-wrapper text-center">
- <img src="http://unsplash.it/1002/250')" alt="">
- <div class="form-inputs salelogin"><h1>Add new Product</h1>
+<div class="form-wrapper">
+<div class="registration-banner"></div>
+
+
+ <div class="form-inputs salelogin">
+      <div class="form-group">
 
   <%= simple_form_for [:merchant, @product] do |f| %>
 
@@ -22,8 +24,10 @@
 
   <%= f.input :url, label: false, placeholder: "URL", input_html: {class: "finput"} %>
 
+  <div class="submit-button text-center">
   <%= f.button :submit %>
+  </div>
+</div>
 </div>
 <% end %>
 </div>
-<br>
