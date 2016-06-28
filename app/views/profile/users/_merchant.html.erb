@@ -2,45 +2,52 @@
 
 <div class="col-xs-12">
 
-<div class="container">
-  <div class="row">
-    <div class="hidden-xs col-md-4">
-    </div>
-    <div class="paddingfix col-xs-12 col-md-4">
-      <div class="profileheader text-center">
-          <%= image_tag @user.photo, class: "img-rounded" %>
-        <h3 class="username"><%= @user.name %></h3>
+  <div class="container">
+    <div class="row">
+      <div class="hidden-xs col-md-4">
+      </div>
+      <div class="paddingfix col-xs-12 col-md-4">
+        <div class="row">
+          <div class="profileheader text-center">
 
-        <!-- link to products -->
+            <% if @user.photo.present? %>
+            <%= image_tag @user.photo, class: "img-rounded" %>
+            <% else %>
+            <%= image_tag "noavatar.png", class: "img-rounded" %>
+            <% end %>
 
-        <%= link_to merchant_products_path do %>
-        <div class="paddingfix col-xs-6">
-        <div class="profile-button">
-          <h3>  <%= current_user.products.count %> </h3>
-          <p>Products</p>
+            <h3 class="username"><%= @user.name %></h3>
+
+          </div>
         </div>
-        <% end %>
-        </div>
-        <!-- end link to products -->
+        <div class="row">
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
 
-        <!-- link to wishlists -->
+           <i class="fa fa-pencil"></i>
+            <p>edit profile</p>
 
-        <%= link_to account_wishlists_path do %>
-        <div class="paddingfix col-xs-6">
-        <div class="profile-button">
-          <h3>  <%= 1 %> </h3>
-          <p>stuff</p>
-        </div>
-        <% end %>
-        </div>
-        <!-- end link to wishlists -->
-        <i class="fa fa-times-circle"></i> delete profile
-        <i class="fa fa-pencil"></i> edit profile
+            </div>
+          </div>
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
+            <i class="fa fa-"></i>
+            <p>show products</p>
 
+            </div>
+          </div>
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
+
+              <i class="fa fa-plus"></i>
+              <p>add product</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden-xs col-md-4">
       </div>
     </div>
-    <div class="hidden-xs col-md-4">
-    </div>
   </div>
-</div>
 </div>
