@@ -1,3 +1,5 @@
+
+
 /* -------------------------------------
  * CSS code specific to home page
  * (margin/padding adjustments)
@@ -49,7 +51,7 @@
 
 // banner
 .banner-home{
-  background: url("banner.jpg");
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url("banner.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -62,14 +64,14 @@
 }
 
 .banner-home h1 {
- font-family: 'Oswald', sans-serif;
+ font-family: 'Montserrat';
  font-size: 43px;
  margin: 0;
  padding: 0;
 }
 
 .banner-home p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat';
   font-size: 23px;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -77,7 +79,7 @@
 }
 
 .banner-button {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat';
   font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
@@ -94,3 +96,5 @@
   color: white;
 }
 // end banner
+
+
