@@ -22,12 +22,12 @@
   <%= render 'shared/flashes' %>
   <% if params["controller"] == "users/registrations" || params["controller"] == "merchant/products" || params["controller"] == "devise/sessions" %>
   <div class="fallback-container">
-    <% else %>
-    <div class="website-container">
-      <% end %>
-      <%= yield %>
-    </div>
-    <%= javascript_include_tag 'application' %>
+  <% else %>
+  <div class="website-container">
+  <% end %>
+    <%= yield %>
+  </div>
+  <%= javascript_include_tag 'application' %>
     <%= render 'shared/footer' %>
   </body>
   </html>

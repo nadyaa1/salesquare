@@ -12,6 +12,10 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  margin-bottom: 165px;
+  background: url("https:/source.unsplash.com/8LB94CisRuQ");
+  background-size: cover;
+  background-position: center center;
 }
 
 .salelogin{
@@ -150,4 +154,8 @@
   margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 4px 6px -6px #222;
+}
+
+.form-background {
+background-image: image-url('https://source.unsplash.com/8LB94CisRuQ');
 }
