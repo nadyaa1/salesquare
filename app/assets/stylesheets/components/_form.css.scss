@@ -136,12 +136,18 @@
 }
 
 .already-registered {
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .form-wrapper {
 }
 
-// .registration-banner {
-//   background: url("https://source.unsplash.com/ycVFts5Ma4s");
-// }
+.registration-banner {
+  background: url("https://source.unsplash.com/ycVFts5Ma4s");
+  width: 330px;
+  height: 120px;
+  background-size: cover;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -6px #222;
+}
