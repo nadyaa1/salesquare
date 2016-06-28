@@ -1,5 +1,6 @@
+<div class="form-background">
  <div class="form-wrapper">
- <div class="registration-banner"></div>
+ <!-- <div class="registration-banner"></div> -->
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
@@ -41,4 +42,5 @@
     <p>Already have an account? <%= render "devise/shared/links" %></p>
   </div>
 
+</div>
 </div>
