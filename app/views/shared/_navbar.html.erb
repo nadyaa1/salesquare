@@ -100,9 +100,14 @@
 
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+
+        <% if user_signed_in?  %>
+        <li><%= link_to "profile", profile_user_path %></li>
+        <% else %>
+        <li> <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "reg-color-black" %> </li>
+        <% end %>
+
+        <li><%= link_to "shop", products_path %></li>
       </ul>
 
     </div>
