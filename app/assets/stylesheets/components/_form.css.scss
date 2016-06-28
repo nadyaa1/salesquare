@@ -24,7 +24,7 @@
   width: 330px;
 }
 
-.submit-button{
+.submit{
   padding-top: 15px;
 }
 
@@ -141,6 +141,7 @@
 
 .already-registered {
   margin-top: 11px;
+  background-color: white;
 }
 
 .form-wrapper {
@@ -156,6 +157,14 @@
   box-shadow: 0 4px 6px -6px #222;
 }
 
-.form-background {
-background-image: image-url('https://source.unsplash.com/8LB94CisRuQ');
+.submit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  border: 0.9px solid black;
+  color: #232323;
 }

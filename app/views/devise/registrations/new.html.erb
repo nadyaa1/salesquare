@@ -1,5 +1,5 @@
-<div class="form-background">
- <div class="form-wrapper">
+<div class="form-background"></div>
+<div class="form-wrapper">
  <!-- <div class="registration-banner"></div> -->
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -31,12 +31,12 @@
           inline_label: "I am a merchant" %>
         </div>
 
-        <div class="submit-button text-center">
-          <%= f.button :submit, "Sign up" %>
+        <div class="submit text-center">
+          <%= f.button :submit, "Sign up", class: "submit-button" %>
+          <% end %>
         </div>
-      </div>
+
     </div>
-    <% end %>
 
   <div class=" already-registered text-center">
     <p>Already have an account? <%= render "devise/shared/links" %></p>
