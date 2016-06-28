@@ -51,7 +51,7 @@
 
 // banner
 .banner-home{
-  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url("banner.jpg");
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), image-url("banner.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -61,18 +61,19 @@
   align-items: center;
   margin-top: 1px;
   text-align: left;
+  padding-left: 30px;
 }
 
 .banner-home h1 {
  font-family: 'Montserrat';
- font-size: 43px;
+ font-size: 36px;
  margin: 0;
  padding: 0;
 }
 
 .banner-home p {
   font-family: 'Montserrat';
-  font-size: 23px;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 30px;
   padding: 0;
