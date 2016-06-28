@@ -21,8 +21,15 @@
 @import "profile/users";
 
 // Custom
+.website-container{
+  flex: 1;
+}
+
 body{
   background-color: #F7F9FA;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .no-gutter{

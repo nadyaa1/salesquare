@@ -2,23 +2,42 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+// Navbar white wrapper
+.categories-white-wrapper{
+  background: #232323;
+  height: 50px;
+  margin-top: 1px;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+}
 
 // categories bar
 .categories-bar{
-  background-color: white;
-  height: 40px;
+  background-color: #232323;
+  height: 50px;
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.categories-bar ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .categories-bar li{
   display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .categories-bar a{
-  color: #232323;
+  color: white;
   transition: all 300ms ease;
 }
 
@@ -30,11 +49,46 @@
 
 // banner
 .banner-home{
+  background: url("banner.jpg");
+  background-position: center center;
+  background-size: cover;
   width: 100%;
   height: 60vh;
-  background: url('http://unsplash.it/1920/1117');
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1px;
+  text-align: left;
+}
+
+.banner-home h1 {
+ margin: 0;
+ padding: 0;
+}
+
+.banner-home p {
+  // font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.banner-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  border: 3px solid black;
+  color: #232323;
+}
+
+.banner-button:hover {
+  text-decoration: none;
+  background: #232323;
+  color: white;
 }
 // end banner

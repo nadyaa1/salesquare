@@ -1,34 +1,69 @@
+// Navbar white wrapper
+.navbar-white-wrapper{
+  background: white;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+}
+
+// Navbar left logo
 .navbar-left-logo {
   background: white;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 3px;
   z-index: 98;
 }
 
+.navbar-left-logo h1 {
+  font-family: Montserrat;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+// End Navbar left logo
+
+// Navbar center search
 .navbar-center-search {
   background: white;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 99;
+  position: relative;
+}
+
+.navbar-center-search input {
+  text-indent: 7px;
+}
+
+.navbar-center-search .fa-search {
+  position: absolute;
+  top: 33px;
+  right: 16px;
+  font-size: 15px;
 }
 
 .navbar-center-search-form {
-  width: 100%
+  width: 100%;
 }
 
 .navbar-center-search-bar {
   width: 100%;
   height: 40px;
-  background: #F0F1F2;
-  color: #E8E8E8;
+  background: #F0F0F0;
+  color: #232323;
   padding-left: 10px;
-  border: none;
+  border: 1px solid #E8E8E8;
 }
+
+.navbar-center-search-bar:focus {
+  border: none;
+  outline: none;
+  background: #E8E8E8;
+}
+// End Navbar center search
+
 
 // .navbar-wagon-search-btn {
 //   line-height: 35px;
@@ -53,16 +88,17 @@
 //   border: 1px solid #CCCCCC;
 // }
 
+// Navbar right links
 .navbar-right-links {
   background: white;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .navbar-right-links a {
-  padding-right: 15px;
+  padding-left: 15px;
   z-index: 100;
 }
 
@@ -70,9 +106,15 @@
   text-decoration: none;
 }
 
+.reg-color-black {
+  color: #232323;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+}
+
 .navbar-right-mobile {
   background: white;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -82,6 +124,8 @@
 .navbar-right-mobile i {
   padding-right: 15px;
 }
+// End Navbar right links
+
 
 // .navbar-wagon {
 //   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
