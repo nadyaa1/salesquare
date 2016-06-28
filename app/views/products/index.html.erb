@@ -1,67 +1,4 @@
-<!-- category bar -->
-<div class="hidden-sm hidden-xs">
-  <div class="container-categories">
-    <div class="text-center">
-
-      <div class="dropdown">
-        <li class="<%= category_filter_css_class("women") %>" class="dropbtn"><%= link_to "Women", products_path(category: "women") %></li>
-        <div class="dropdown-content">
-          <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shoes", products_path(category: "shoes") %></li>
-          <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Bags", products_path(category: "bags") %></li>
-          <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Dresses", products_path(category: "dresses") %></li>
-          <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Coats", products_path(category: "coats") %></li>
-          <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Accessories", products_path(category: "shoes") %></li>
-          <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Blazers", products_path(category: "bags") %></li>
-          <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Jackets & Coats", products_path(category: "dresses") %></li>
-          <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Jeans", products_path(category: "coats") %></li>
-          <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Lingerie", products_path(category: "coats") %></li>
-          <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shirts & Blouses", products_path(category: "shoes") %></li>
-          <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Skirts", products_path(category: "bags") %></li>
-          <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Socks & Tights", products_path(category: "dresses") %></li>
-          <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Tops", products_path(category: "coats") %></li>
-        </div>
-      </div>
-
-      <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shoes", products_path(category: "shoes") %></li>
-      <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Bags", products_path(category: "bags") %></li>
-
-      <div class="dropdown">
-        <li class="<%= category_filter_css_class("men") %>" class="dropbtn"><%= link_to "Men", products_path(category: "men") %></li>
-        <div class="dropdown-content">
-         <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shoes", products_path(category: "shoes") %></li>
-         <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Bags", products_path(category: "bags") %></li>
-         <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Accessories", products_path(category: "dresses") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Jackets & Coats", products_path(category: "coats") %></li>
-         <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Hoodies & Sweatshirts", products_path(category: "dresses") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Blazers", products_path(category: "coats") %></li>
-         <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shirts", products_path(category: "shoes") %></li>
-         <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Cardigans & Jumpsuits", products_path(category: "bags") %></li>
-         <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Jackets & Coats", products_path(category: "dresses") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Trousers", products_path(category: "coats") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Shorts", products_path(category: "coats") %></li>
-         <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "T-shirts & Vests", products_path(category: "shoes") %></li>
-         <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Trousers", products_path(category: "bags") %></li>
-         <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Socks & Tights", products_path(category: "dresses") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Tops", products_path(category: "coats") %></li>
-       </div>
-     </div>
-
-     <div class="dropdown">
-       <li class="<%= category_filter_css_class("kids") %>" class="dropbtn"><%= link_to "Kids", products_path(category: "kids") %></li>
-       <div class="dropdown-content">
-         <li class="<%= category_filter_css_class("shoes") %>"><%= link_to "Shoes", products_path(category: "shoes") %></li>
-         <li class="<%= category_filter_css_class("bags") %>"><%= link_to "Bags", products_path(category: "bags") %></li>
-         <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Dresses", products_path(category: "dresses") %></li>
-         <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Coats", products_path(category: "coats") %></li>
-       </div>
-     </div>
-
-     <li class="<%= category_filter_css_class("dresses") %>"><%= link_to "Dresses", products_path(category: "dresses") %></li>
-     <li class="<%= category_filter_css_class("coats") %>"><%= link_to "Coats", products_path(category: "coats") %></li>
-   </div>
- </div>
-</div>
-<!-- end category bar -->
+<%= render 'shared/catbar' %>
 
 <div class="marginfix-top">
   <div class="container-fluid">
@@ -69,11 +6,6 @@
       <div class="hidden-sm col-md-2">
       </div>
       <div class="col-xs-12 col-md-8">
-        <br>
-        <div class="stripetrough text-center">
-          <h2><span>Find what you are looking for</span></h2>
-          <p> A selection of the best products for the best prices</p>
-        </div>
 
         <div class="container-fluid text-center ">
           <div class="row">
