@@ -23,10 +23,10 @@
        <p> <%= truncate(@product.description, length: 50) %></p>
 
        <div class="showbuttons">
-         <button class="btn btn-primary"> go to shop </button>
+         <button class="banner-button"> go to shop </button>
          <% if user_signed_in? %>
-         <%= link_to "#addToWishlist", class: "btn btn-primary", "data-toggle" => "modal" do %>
-         <i class="fa fa-plus-circle" aria-hidden="true"></i> Add to wishlist
+         <%= link_to "#addToWishlist", class: "banner-button", "data-toggle" => "modal" do %>
+         <i  aria-hidden="true"></i> Add to wishlist
          <% end %>
          <%= render "addToWishlist" %>
          <% else %>
