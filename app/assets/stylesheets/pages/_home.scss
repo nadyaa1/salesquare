@@ -4,9 +4,25 @@
  * ------------------------------------- */
 .container-categories{
   list-style-type: none;
+<<<<<<< refs/remotes/origin/homepage
   background-color: white;
   height: 40px;
 
+||||||| master
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+>>>>>>> local
 
 }
 
@@ -29,11 +45,42 @@
   text-decoration: none;
 }
 
+<<<<<<< refs/remotes/origin/homepage
 .banner-container{
+||||||| master
+// banner
+.banner-home{
+  background: url("banner.jpg");
+  background-position: center center;
+  background-size: cover;
+=======
+// banner
+.banner-home{
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), url("banner.jpg");
+  background-position: center center;
+  background-size: cover;
+>>>>>>> local
   width: 100%;
+<<<<<<< refs/remotes/origin/homepage
   height: 50vh;
   background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(138,205,209,0.51) 99%,rgba(138,205,209,0.5) 100%), url('http://unsplash.it/1920/1080');
   background-size: cover;
+||||||| master
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+  text-align: left;
+=======
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+  text-align: left;
+  padding-left: 20px;
+>>>>>>> local
 }
 
 .banner-content{
@@ -48,11 +95,38 @@ padding: 50px;
   transition: 0.3s;
 }
 
+<<<<<<< refs/remotes/origin/homepage
 .salebutton:hover{
   padding: 10px 20px;
   color: black;
+||||||| master
+.banner-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+=======
+.banner-button {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+>>>>>>> local
   text-decoration: none;
+<<<<<<< refs/remotes/origin/homepage
 
+||||||| master
+  border: 3px solid black;
+  color: #232323;
+=======
+  border: 3px solid black;
+  color: #232323;
+  transition: 0.3s;
+>>>>>>> local
 }
 
 
@@ -76,3 +150,10 @@ padding: 50px;
 .infoelement:hover{
   opacity: 1;
 }
+<<<<<<< refs/remotes/origin/homepage
+||||||| master
+// end banner
+=======
+
+// end banner
+>>>>>>> local

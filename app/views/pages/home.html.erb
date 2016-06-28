@@ -18,6 +18,7 @@
 
   <!-- banner -->
 
+<<<<<<< refs/remotes/origin/homepage
   <div class="banner-container">
     <div class="banner-content text-center">
       <h1>WELCOME TO SALESQUARE</h1>
@@ -26,6 +27,11 @@
       <%= link_to "Show me", products_path, class: "salebutton" %>
     </div>
   </div>
+||||||| master
+              <li class="<%= category_filter_css_class("bags") %>"><%= link_to "MERKEN", products_path(category: "bags") %></li>
+=======
+             <li class="<%= category_filter_css_class("bags") %>"><%= link_to "MERKEN", products_path(category: "bags") %></li>
+>>>>>>> local
 
   <!-- end banner -->
 
@@ -34,6 +40,7 @@
   <div class="wrapper-info text-center">
     <div class="container">
       <div class="row">
+<<<<<<< refs/remotes/origin/homepage
 
         <div class="col-xs-12 col-md-4">
           <div class="infoelement">
@@ -60,6 +67,19 @@
             </div>
           </div>
         </div>
+||||||| master
+
+        <h1>WELCOME TO SALESQUARE</h1>
+        <p>Discover the latest Fashion Sales</p>
+        <%= link_to "Show Me", products_path, class: "banner-button" %>
+
+=======
+        <div class="banner-txt">
+          <h1>WELCOME TO SALESQUARE</h1>
+          <p>Discover the latest Fashion Sales</p>
+          <%= link_to "SHOW ME", products_path, class: "banner-button" %>
+        </div>
+>>>>>>> local
       </div>
     </div>
 
