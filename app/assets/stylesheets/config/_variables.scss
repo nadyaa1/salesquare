@@ -3,63 +3,15 @@
  * ------------------------------------- */
 // Google fonts
 
-<<<<<<< refs/remotes/origin/homepage
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@font-face {
-    font-family: 'HelveticaNeue-CondensedBold';
-    src:font-url('HelveticaNeue-CondensedBold.ttf');
-    src:font-url('HelveticaNeue-CondensedBold.ttf') format('truetype');
-||||||| master
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500|Montserrat:400,700|Handlee");
-@font-face {
-    font-family: 'HelveticaNeue-CondensedBold';
-    src:font-url('HelveticaNeue-CondensedBold.ttf');
-    src:font-url('HelveticaNeue-CondensedBold.ttf') format('truetype');
-=======
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
->>>>>>> local
+
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-<<<<<<< refs/remotes/origin/homepage
-@font-face {
-    font-family: 'HelveticaNeue-Light';
-    src:font-url('HelveticaNeue-Light.ttf');
-    src:font-url('HelveticaNeue-Light.ttf') format('truetype');
 
-}
-
-@font-face {
-    font-family: 'HelveticaNeue-Medium';
-    src:font-url('HelveticaNeue-Medium.ttf');
-    src:font-url('HelveticaNeue-Medium.ttf') format('truetype');
-
-}
-
-$base-font: "HelveticaNeue-Light", "Helvetica", "sans-serif";
-$header-font: "HelveticaNeue-CondensedBold", "Helvetica", "sans-serif";
-$subheader-font: "HelveticaNeue-Medium", "Helvetica", "sans-serif";
-||||||| master
-@font-face {
-    font-family: 'HelveticaNeue-Light';
-    src:font-url('HelveticaNeue-Light.ttf');
-    src:font-url('HelveticaNeue-Light.ttf') format('truetype');
-
-}
-
-@font-face {
-    font-family: 'HelveticaNeue-Medium';
-    src:font-url('HelveticaNeue-Medium.ttf');
-    src:font-url('HelveticaNeue-Medium.ttf') format('truetype');
-
-}
-
-$base-font: "Montserrat", "Helvetica", "sans-serif";
-$header-font: "Montserrat", "Helvetica", "sans-serif";
-$subheader-font: "Montserrat", "Helvetica", "sans-serif";
-=======
 $base-font: "Montserrat", "sans-serif";
 $header-font: "Montserrat", "sans-serif";
 $subheader-font: "Montserrat", "sans-serif";

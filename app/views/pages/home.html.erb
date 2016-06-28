@@ -1,86 +1,22 @@
 
-<!-- categories bar -->
 
-<div class="hidden-sm hidden-xs">
-  <div class="container-categories">
-    <div class="text-center">
-      <li><%= link_to "Women", products_path(category: "women") %></li>
-      <li><%= link_to "Shoes", products_path(category: "shoes") %></li>
-      <li><%= link_to "Bags", products_path(category: "bags") %></li>
-      <li><%= link_to "Men", products_path(category: "men") %></li>
-      <li><%= link_to "Kids", products_path(category: "kids") %></li>
-      <li><%= link_to "Dresses", products_path(category: "dresses") %></li>
-      <li><%= link_to "Coats", products_path(category: "coats") %></li>
-    </div>
-  </div>
-</div>
-  <!-- end categires bar -->
+<div class="col-xs-12 no-gutter">
 
   <!-- banner -->
+  <div class="col-xs-12 col-md-12 col-lg-10 col-lg-offset-1 text-center no-gutter">
+   <div class="banner-home">
+     <div class="container">
+       <div class="row">
 
-<<<<<<< refs/remotes/origin/homepage
-  <div class="banner-container">
-    <div class="banner-content text-center">
-      <h1>WELCOME TO SALESQUARE</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <br>
-      <%= link_to "Show me", products_path, class: "salebutton" %>
-    </div>
-  </div>
-||||||| master
-              <li class="<%= category_filter_css_class("bags") %>"><%= link_to "MERKEN", products_path(category: "bags") %></li>
-=======
-             <li class="<%= category_filter_css_class("bags") %>"><%= link_to "MERKEN", products_path(category: "bags") %></li>
->>>>>>> local
+         <h1>WELCOME TO SALESQUARE</h1>
+         <p>Discover the latest Fashion Sales</p>
+         <%= link_to "SHOW ME", products_path, class: "banner-button" %>
 
-  <!-- end banner -->
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- end banner -->
 
-  <!-- quick info -->
+</div>
 
-  <div class="wrapper-info text-center">
-    <div class="container">
-      <div class="row">
-<<<<<<< refs/remotes/origin/homepage
-
-        <div class="col-xs-12 col-md-4">
-          <div class="infoelement">
-            <i class="fa fa-money"></i>
-            <h3>Want to save money?</h3>
-            <p>But still want the best quality?</p>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <div class="infoelement">
-            <i class="fa fa-shopping-bag"></i>
-            <h3>Shop 'till you drop</h3>
-            <p>You are on the right place!
-              Salesquare provides the best deals by comapring the biggest sales.</p>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-4">
-            <div class="infoelement">
-              <i class="fa fa-comments-o"></i>
-              <h3>Read some of the reviews</h3>
-              <p>And see for yourself!</p>
-            </div>
-          </div>
-        </div>
-||||||| master
-
-        <h1>WELCOME TO SALESQUARE</h1>
-        <p>Discover the latest Fashion Sales</p>
-        <%= link_to "Show Me", products_path, class: "banner-button" %>
-
-=======
-        <div class="banner-txt">
-          <h1>WELCOME TO SALESQUARE</h1>
-          <p>Discover the latest Fashion Sales</p>
-          <%= link_to "SHOW ME", products_path, class: "banner-button" %>
-        </div>
->>>>>>> local
-      </div>
-    </div>
-
-    <!-- end info -->
