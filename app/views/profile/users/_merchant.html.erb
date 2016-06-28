@@ -1,0 +1,53 @@
+
+
+<div class="col-xs-12">
+
+  <div class="container">
+    <div class="row">
+      <div class="hidden-xs col-md-4">
+      </div>
+      <div class="paddingfix col-xs-12 col-md-4">
+        <div class="row">
+          <div class="profileheader text-center">
+
+            <% if @user.photo.present? %>
+            <%= image_tag @user.photo, class: "img-rounded" %>
+            <% else %>
+            <%= image_tag "noavatar.png", class: "img-rounded" %>
+            <% end %>
+
+            <h3 class="username"><%= @user.name %></h3>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
+
+           <i class="fa fa-pencil"></i>
+            <p>edit profile</p>
+
+            </div>
+          </div>
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
+            <i class="fa fa-"></i>
+            <p>show products</p>
+
+            </div>
+          </div>
+          <div class="col-md-4 paddingfix">
+            <div class="profilebutton">
+
+              <i class="fa fa-plus"></i>
+              <p>add product</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden-xs col-md-4">
+      </div>
+    </div>
+  </div>
+</div>

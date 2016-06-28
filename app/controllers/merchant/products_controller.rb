@@ -53,4 +53,5 @@ class Merchant::ProductsController < ApplicationController
       :category
       )
   end
+
 end

@@ -10,6 +10,14 @@ gem 'devise'
 gem 'redis'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'activeadmin', github: 'activeadmin'
+gem 'pg_search'
+gem 'money-rails'
+
+source 'https://rails-assets.org' do  # Add this at line 2
+  gem "rails-assets-underscore"
+  gem "rails-assets-bootstrap-star-rating"
+end
 
 gem 'sass-rails'
 gem 'jquery-rails'

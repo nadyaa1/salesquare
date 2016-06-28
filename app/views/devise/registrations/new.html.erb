@@ -1,27 +1,46 @@
-<br>
-<div class="login-wrapper text-center">
- <img src="http://unsplash.it/1001/251')" alt="">
+<div class="form-background">
+ <div class="form-wrapper">
+ <!-- <div class="registration-banner"></div> -->
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-<div class="form-inputs salelogin">
+    <div class="form-inputs salelogin">
+      <div class="form-group">
+        <%= f.input :name, required: true,
+        autofocus: true, label: false,
+        placeholder: "Username",
+        class: 'finput' %>
 
-    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "email" %>
-    <%= f.input :password, required: true, label: false, placeholder: "password" %>
-    <%= f.input :password_confirmation, required: true, label: false, placeholder: "confirm password" %>
-    <%= f.input :photo, label: false %>
-    <%= f.input :photo_cache, as: :hidden %>
+        <%= f.input :email,
+        required: true, autofocus: true,
+        label: false,
+        placeholder: "Email" %>
 
-    <%= f.input_field :merchant, as: :boolean, inline_label: "Merchant?" %>
+        <%= f.input :password,
+        required: true,
+        label: false,
+        placeholder: "Password" %>
+
+        <%= f.input :password_confirmation,
+        required: true,
+        label: false,
+        placeholder: "Confirm password" %>
+
+        <div class="merchant">
+          <%= f.input_field :merchant, as: :boolean,
+          inline_label: "I am a merchant" %>
+        </div>
+
+        <div class="submit-button text-center">
+          <%= f.button :submit, "Sign up" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  <div class=" already-registered text-center">
+    <p>Already have an account? <%= render "devise/shared/links" %></p>
   </div>
-<div class="f-actions">
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up", class: "loginn" %>
-  </div>
-<% end %>
-</div>
 
-<div class="loginlinks">
-<%= render "devise/shared/links" %>
 </div>
 </div>

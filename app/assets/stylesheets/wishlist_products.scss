@@ -1,0 +1,61 @@
+// Place all the styles related to the wishlist_products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wishlist-wrapper{
+  background-color: lightgrey;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px -6px #222;
+}
+
+.wishlist-wrapper h3{
+  display: inline-block;
+  padding: 3px;
+  margin: 0px;
+}
+
+.wishlist-wrapper i{
+  float: right;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.wishlist-content{
+  justify-content: space-between;
+  text-align: left;
+  display: flex;
+ margin: 5px 5px 10px 5px;
+ background-color: white;
+ border-radius: 2px;
+ padding: 5px;
+ box-shadow: 0 4px 6px -6px #222;
+}
+
+
+.wishlist-content-info {
+  width: 145px;
+  display: flex;
+  flex-direction:column;
+}
+
+.wishlist-content img{
+  display: inline-block;
+  margin-right: 15px;
+
+}
+.wishlist-content p{
+  display: inline-block;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.wishicons{
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+}
+
+// .pic-size{
+//   width: 100px;
+// }
+

@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
 
   resources :products, only: [:index, :show, :create, :destroy] do
+
     resources :reviews, only: :create
+
+    resources :wishlist_products, only: [:show, :create]
+
   end
 
-  resource :account, only: [:show, :edit, :update]
+  resource :account, only: [:show, :edit, :update] do
+    resources :wishlists,         only: [:index, :edit, :update, :destroy]
+    resources :wishlist_products, only: [:destroy]
+  end
 
   namespace :merchant do
     resources :products
