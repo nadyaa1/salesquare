@@ -37,19 +37,6 @@
         <% if user_signed_in? %>
 
         <!-- Different navigation for logged in / not logged in -->
-        <!-- Add product button-->
-        <div class="">
-          <% if current_user && current_user.merchant %>
-          <%= link_to "Add product", new_merchant_product_path %>
-          <% end %>
-        </div>
-
-        <div class="">
-          <% if current_user && current_user.merchant %>
-          <%= link_to "List my Products", merchant_products_path%>
-          <% end %>
-        </div>
-        <!-- End Add product button -->
 
         <!-- Profile picture and Dropdown -->
         <div class="navbar-wagon-item">
