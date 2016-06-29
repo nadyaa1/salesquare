@@ -1,8 +1,8 @@
 #footer {
   width: 100%;
   height: auto;
-  background: #FFFFFF;
-  color: #232323;
+  background: #0E2439;
+  color: #FFFFFF;
   margin: 0 auto;
   padding: 20px;
   position: absolute;
@@ -15,14 +15,14 @@
 }
 
 #footer ul {
-  margin-top: 10px;
+  margin-top: 12px;
   position: relative;
 }
 
 .footer-icons i {
-  color: #232323;
+  color: #FFFFFF;
   font-size: 1em;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   transition: color 0.5s ease;
 }
 
@@ -33,8 +33,12 @@
 .footer-icons ul {
   font-family: Open Sans;
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.font-icons-bold {
   font-size: 0.9em;
+  font-weight: bold;
 }
 
 .footer-pages {
@@ -42,7 +46,7 @@
 }
 
 .footer-pages a {
-  color: #232323;
+  color: #FFFFFF;
   font-family: Open Sans;
   text-transform: uppercase;
   font-size: 0.9em;
