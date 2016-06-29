@@ -1,7 +1,7 @@
 <!-- product -->
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-6  col-md-offset-3 pshow-wrapper ">
+    <div class="col-xs-12 col-md-8  col-md-offset-2 pshow-wrapper ">
       <!-- product content -->
 
       <div class="row">
@@ -23,10 +23,10 @@
        <p> <%= truncate(@product.description, length: 50) %></p>
 
        <div class="showbuttons">
-         <button class="banner-button"> go to shop </button>
+         <a class="buttonshowpage"> GO TO SHOP </a>
          <% if user_signed_in? %>
-         <%= link_to "#addToWishlist", class: "banner-button", "data-toggle" => "modal" do %>
-         <i  aria-hidden="true"></i> Add to wishlist
+         <%= link_to "#addToWishlist", class: "buttonshowpage", "data-toggle" => "modal" do %>
+         <i class="fa fa-plus-circle" aria-hidden="true"></i>  ADD TO WISHLIST
          <% end %>
          <%= render "addToWishlist" %>
          <% else %>
@@ -42,7 +42,7 @@
 
 
 <div class="row">
-        <div class="col-xs-12 col-md-6  col-md-offset-3 paddingfix">
+        <div class="col-xs-12 col-md-8  col-md-offset-2 paddingfix">
           <div class="show-wrapper">
             <div class="reviewintro">
               <h1>Reviews</h1>
