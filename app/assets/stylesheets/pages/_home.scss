@@ -52,7 +52,7 @@
 
 // banner
 .banner-home{
-  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(0,0,0,0)), image-url("banner.jpg");
+  background: image-url("banner.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
