@@ -20,7 +20,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -51,7 +52,7 @@
 
 // banner
 .banner-home{
-  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%), image-url("banner.jpg");
+  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(0,0,0,0)), image-url("banner.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -61,18 +62,19 @@
   align-items: center;
   margin-top: 1px;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .banner-home h1 {
- font-family: 'Montserrat';
- font-size: 36px;
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ font-size: 50px;
  margin: 0;
  padding: 0;
 }
 
 .banner-home p {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -80,14 +82,14 @@
 }
 
 .banner-button {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-decoration: none;
-  border: 3px solid black;
+  border: 2px solid black;
   color: #232323;
 }
 
