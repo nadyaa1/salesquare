@@ -2,11 +2,12 @@ namespace :scraper do
   desc "Retrieves newest sale items and puts them in database"
   task run: [:environment] do
 
-    sales_index_url_string = "http://www.hm.com/nl/products/sale"
+    sales_index_url_string = "http://www.hm.com/us/products/sale"
 
     sales_index_page = Nokogiri::HTML(open(sales_index_url_string))
 
     sale_list_items = sales_index_page.css("ul.products-list > li")
+
 
 # TO DEBUG
 # sale_list_items = sale_list_items.take(1)
