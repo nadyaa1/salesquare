@@ -13,6 +13,7 @@ gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
 gem 'pg_search'
 gem 'money-rails'
+gem 'nokogiri'
 
 source 'https://rails-assets.org' do  # Add this at line 2
   gem "rails-assets-underscore"
