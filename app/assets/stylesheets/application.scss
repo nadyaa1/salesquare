@@ -28,14 +28,31 @@
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;
   background-color: #F7F9FA;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: $base-font;
 }
 
 .no-gutter{
   padding-left: 0px;
   padding-right: 0px;
 }
+
+h1{
+  font-family: $header-font;
+}
+
+h2{
+  font-family: $header-font;
+}
+
+h3{
+  font-family: $subheader-font;
+}
+
+p{
+  font-family: $base-font;
+}
+
