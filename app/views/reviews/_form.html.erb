@@ -1,14 +1,14 @@
 <%= simple_form_for([ product, review ], remote: true) do |form| %>
-  <%= form.input :rating, input_html: {
-      class: 'rating kv-ltr-theme-default-star rating-loading',
-      value: "3",
-      dir: "ltr",
-      :'data-size' => "xs",
-      :'data-min' => "0",
-      :'data-max' => "5",
-      :'data-step' => "0.5"
-    } %>
+<%= form.input :rating, input_html: {
+  class: 'rating  kv-ltr-theme-default-star rating-loading',
+    value: "3",
+    dir: "ltr",
+    :'data-size' => "xs",
+    :'data-min' => "0",
+    :'data-max' => "5",
+    :'data-step' => "0.5"
+  } %>
 
-<%= form.input :description %>
-<%= form.button :submit %>
-<% end %>
+  <%= form.input :description %>
+  <%= form.button :submit %>
+  <% end %>

@@ -7,3 +7,52 @@
 //  .form-wrapper input[type=submit] {
 //   background-color: blue;
 //  }
+.glyphicon-star-empty{
+color: $brand-color;
+}
+
+.glyphicon-star{
+color: $brand-color;
+}
+
+.buttonshowpage{
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  background-color: white;
+  transition: 0.3s;
+  margin: 6px;
+}
+
+.buttonshowpage:hover{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+
+.photoreview{
+  display: flex;
+}
+
+.reviewdesc{
+
+}
+
+.photoreview img{
+  margin: 5px;
+  display: inline;
+  margin-left: -25px;
+}
+
+.photoreview h3{
+  font-size: 20px;
+  display: inline;
+}
+
+.namedescription{
+  margin-left: 10px;
+}
+// .reviewdesc{
+//     display: inline;
+// }
