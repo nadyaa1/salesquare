@@ -14,7 +14,7 @@
 
       <div class="col-xs-12 col-md-6 ">
 
-       <h1> <%= truncate(@product.name, length: 21) %> </h1>
+       <h1> <%= truncate(@product.name.strip, length: 21) %> </h1>
        <%= @product.category %>
 
        <h3>€ <%= @product.price_cents %> </h3>
@@ -23,7 +23,7 @@
        <p> <%= truncate(@product.description, length: 50) %></p>
 
        <div class="showbuttons">
-         <a class="buttonshowpage"> GO TO SHOP </a>
+         <%= link_to "check it out", @product.url, class: "buttonshowpage" %>
          <% if user_signed_in? %>
          <%= link_to "#addToWishlist", class: "buttonshowpage", "data-toggle" => "modal" do %>
          <i class="fa fa-plus-circle" aria-hidden="true"></i>  ADD TO WISHLIST
@@ -33,6 +33,7 @@
          <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg]
          " %>
          <% end %>
+         <br/><br/>
        </div>
      </div>
    </div>
