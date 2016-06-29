@@ -16,12 +16,14 @@
   background: url("https:/source.unsplash.com/8LB94CisRuQ");
   background-size: cover;
   background-position: center center;
+  margin-bottom: 165px;
 }
 
 .salelogin{
   padding: 10px;
   background-color: white;
   width: 330px;
+  border-radius: 4px;
 }
 
 .submit{
@@ -84,7 +86,7 @@
   color: white;
 }
 .loginn:hover{
-  background-color: transparent;
+  backgroud-color: transparent;
   color: white;
 }
 
@@ -145,6 +147,7 @@
 }
 
 .form-wrapper {
+    opacity: 0.91;
 }
 
 .registration-banner {
@@ -167,4 +170,8 @@
   text-decoration: none;
   border: 0.9px solid black;
   color: #232323;
+}
+
+.form-group {
+
 }
