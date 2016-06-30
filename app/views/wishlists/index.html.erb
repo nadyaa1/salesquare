@@ -17,6 +17,7 @@
         <% end %>
 
         <% wishlist.wishlist_products.each do |wishlist_product| %>
+        <%= link_to product_path(wishlist_product.product) do %>
 
         <div class="wishlist-content">
           <%= cl_image_tag wishlist_product.product.photo.url(:wishlist), class: "pic-size" %>
@@ -30,6 +31,7 @@
           <% end %>
 
         </div>
+        <% end %>
         <% end %>
       </div>
     </div>
