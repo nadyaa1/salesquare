@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only:[ :index, :show ]
 
+  add_breadcrumb "home", :root_path
+
+
   def index
     @category = params[:category]
     @search_term = params[:search_term]
@@ -60,6 +63,8 @@ class ProductsController < ApplicationController
     elsif @category == "socks"
       @products = @products.where(category: "socks")
     end
+
+    add_breadcrumb "products", products_path
   end
 
   def search_results
@@ -73,5 +78,7 @@ class ProductsController < ApplicationController
     if user_signed_in?
       @wishlists = current_user.wishlists
     end
+    add_breadcrumb "#{@product.category}", products_path(category: @product.category)
+    add_breadcrumb "#{@product.name}", product_path
   end
 end
