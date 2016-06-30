@@ -20,6 +20,6 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :wishlist do
-    cloudinary_transformation width: 150, crop: :fill
+    cloudinary_transformation width: 100, crop: :fill
   end
 end

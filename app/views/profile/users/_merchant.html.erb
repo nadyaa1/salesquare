@@ -45,6 +45,14 @@
             </div>
           </div>
 
+<%= simple_form_for @user, url: profile_user_path, method: :put  do |f| %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>
+
+
+
         </div>
 
       </div>
