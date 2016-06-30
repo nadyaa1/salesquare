@@ -43,6 +43,7 @@ namespace :scraper do
     product_details_page = Nokogiri::HTML(open(product_url))
     product_description = product_details_page.css('div.description').first.children[5].children.first.to_s.strip
   rescue StandardError
+    puts "skipped #{product_name}"
     next
   end
 
@@ -60,6 +61,7 @@ namespace :scraper do
       new_product.save!
 
   rescue ActiveRecord::RecordInvalid
+    puts "skipped #{product_name}"
     next
   end
 
