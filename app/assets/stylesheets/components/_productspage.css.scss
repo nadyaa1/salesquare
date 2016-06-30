@@ -1,14 +1,14 @@
 .stripetrough h2 {
-   width: 100%;
-   text-align: center;
-   border-bottom: 1px solid black;
-   line-height: 0.1em;
-   margin: 10px 0 20px;
+ width: 100%;
+ text-align: center;
+ border-bottom: 1px solid black;
+ line-height: 0.1em;
+ margin: 10px 0 20px;
 }
 
 .stripetrough h2 span {
-    background: #F7F9FA;
-    padding: 0 10px;
+  background: #F7F9FA;
+  padding: 0 10px;
 }
 
 .marginfix{
@@ -17,4 +17,15 @@
 
 .marginfix-top{
   margin-top: 50px;
+}
+
+.breadcrumbs-design-index{
+  background-color: white;
+  box-shadow: 0px 0px 6px -2px rgba(138,138,138,1);
+  max-width: 100%;
+  margin: 5px auto;
+  overflow: hidden;
+  margin-left: 7px;
+  margin-right: 7px;
+  padding: 10px;
 }
