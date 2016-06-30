@@ -8,8 +8,9 @@ namespace :scraper do
 
 
     categories.each do |category|
+      category == 'ladies' ? product_category = 'women' : product_category = category
       puts "Started destroying every product for category #{category}"
-      Product.where(category: category).destroy_all
+      Product.where(category: product_category).destroy_all
       puts "Destroyed all products"
       category_index_url_string = "http://www.hm.com/nl/products/sale/#{category}"
 
@@ -23,8 +24,11 @@ namespace :scraper do
 
     sale_list_items.each do |sale_product|
   #set the product's name
-  product_name = sale_product.css("div.details").first.children[0].to_s.strip
-
+  begin
+    product_name = sale_product.css("div.details").first.children[0].to_s.strip
+  rescue StandardError
+    puts "skipped #{product_name}"
+  end
   puts "Adding product #{product_name}"
 
   #set the product image string
@@ -47,7 +51,6 @@ namespace :scraper do
     next
   end
 
-  category == 'ladies' ? product_category = 'women' : product_category = category
 
   # 2 == 3 ? true : false
   begin
@@ -58,7 +61,7 @@ namespace :scraper do
      category: product_category,
      description: product_description
      )
-      new_product.save!
+    new_product.save!
 
   rescue ActiveRecord::RecordInvalid
     puts "skipped #{product_name}"
