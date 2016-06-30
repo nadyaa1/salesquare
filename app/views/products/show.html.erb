@@ -1,71 +1,69 @@
 <!-- product -->
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-8  col-md-offset-2 pshow-wrapper ">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 pshow-wrapper ">
       <!-- product content -->
 
-      <div class="row">
-        <div class="col-xs-12 col-md-6 paddingfix">
+      <div class="show-wrapper-new">
 
-        <div class="pimage-show" style=" background-image: url('<%= @product.photo%> ">
+        <div class="pimage-show" style=" background-image: url('<%= @product.photo%>')">
         </div>
 
-      </div>
+        <div class="psname">
+          <h1> <%= truncate(@product.name.strip, length: 21) %> </h1>
+          <h2> <%= @product.category %></h2>
+          <h3>€ <%= @product.price %> </h3>
+          <p> <strong> DESCRIPTION </strong><br> <%= truncate(@product.description, length: 100) %>  </p>
+          <div class="showbuttons">
 
-      <div class="col-xs-12 col-md-6 ">
+            <%= link_to "CHECK IT OUT", @product.url, class: "buttonshowpage", target: "_blank" %>
 
-       <h1> <%= truncate(@product.name.strip, length: 21) %> </h1>
-       <%= @product.category %>
+            <% if user_signed_in? %>
+            <%= link_to "#addToWishlist", class: "buttonshowpage", "data-toggle" => "modal" do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>  ADD TO WISHLIST
 
-       <h3>€ <%= @product.price_cents %> </h3>
-
-       <h3 class="margfix">Description </h3>
-       <p> <%= truncate(@product.description, length: 50) %></p>
-
-       <div class="showbuttons">
-         <%= link_to "CHECK IT OUT", @product.url, class: "buttonshowpage" %>
-         <% if user_signed_in? %>
-         <%= link_to "#addToWishlist", class: "buttonshowpage", "data-toggle" => "modal" do %>
-         <i class="fa fa-plus-circle" aria-hidden="true"></i>  ADD TO WISHLIST
-         <% end %>
-         <%= render "addToWishlist" %>
-         <% else %>
-         <%= link_to "add to wishlist", new_user_session_path, class: "btn btn-primary btn-lg]
-         " %>
-         <% end %>
-
-       </div>
-     </div>
-   </div>
-
-   <!-- end product content -->
-   <!-- product end -->
+            <% end %>
+            <%= render "addToWishlist" %>
 
 
-<div class="row">
-        <div class="col-xs-12 col-md-8  col-md-offset-2 paddingfix no-gutter">
-          <div class="show-wrapper">
-            <div class="reviewintro">
-              <h1>Reviews</h1>
-              <div class="positionReview">
-                <%= pluralize @product.reviews.size, "review" %>
-              </div>
-              <div id="reviews">
-                <% if @product.reviews.blank? %>
-                Be the first to leave a review for <%= @product.name %>
-                <% else %>
-                <% @product.reviews.each do |review| %>
-                <div class="reviews-box">
-                  <%= render 'reviews/show', review: review %>
-                </div>
-                <% end %>
-                <% end %>
-              </div>
-              <%= render 'reviews/form', product: @product, review: @review %>
-            </div>
+            <% else %>
+            <%= link_to "#addToWishlist", class: "buttonshowpage", "data-toggle" => "modal" do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>  ADD TO WISHLIST
+            <% end %>
+            <% end %>
           </div>
+
+
+<% if user_signed_in? %>
+
+  <h1>Reviews</h1>
+        <div class="positionReview">
+          <%= pluralize @product.reviews.size, "review" %>
         </div>
+        <div id="reviews">
+          <% if @product.reviews.blank? %>
+          Be the first to leave a review for <%= @product.name %>
+          <% else %>
+          <% @product.reviews.each do |review| %>
+          <div class="reviews-box">
+            <%= render 'reviews/show', review: review %>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <%= render 'reviews/form', product: @product, review: @review %>
+<% else %>
+<p style="color: blue;">* sign in to leave a review</p>
+
+<% end %>
+
+
+        </div>
+
+
+
       </div>
+
     </div>
   </div>
 </div>
