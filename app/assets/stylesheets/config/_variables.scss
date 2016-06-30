@@ -2,15 +2,16 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Yanone+Kaffeesatz:400,700,300,200");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Yanone+Kaffeesatz:400,700,300,200");
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
+
+
 
 $base-font: "Open Sans", "sans-serif";
-$header-font: "Open Sans", "sans-serif";
-$subheader-font: "Open Sans", "sans-serif";
+$header-font: "Yanone Kaffeesatz", "Open Sans", "sans-serif";
+$subheader-font: "Open Sans", "Open Sans", "sans-serif";
+
+
 
  // Local fonts (uncomment following lines)
  // @font-face {
